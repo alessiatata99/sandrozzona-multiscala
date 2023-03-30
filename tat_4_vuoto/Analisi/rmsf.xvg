@@ -1,0 +1,28 @@
+# This file was created Thu Mar 30 15:39:22 2023
+# Created by:
+#               :-) GROMACS - gmx rmsf, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx rmsf -f sandrozzona-multiscala/tat_4_vuoto/MD-Prod/MD_tat4.xtc -s sandrozzona-multiscala/tat_4_vuoto/MD-Prod/prod_MD_tat4.tpr -o sandrozzona-multiscala/tat_4_vuoto/Analisi/rmsf.xvg -res
+# gmx rmsf is part of G R O M A C S:
+#
+# Good gRace! Old Maple Actually Chews Slate
+#
+@    title "RMS fluctuation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+   47   0.2061
+   48   0.1066
+   49   0.1675
+   50   0.1107
+   51   0.1141
+   52   0.0539
+   53   0.0921
+   54   0.0759
+   55   0.0772
+   56   0.0642
+   57   0.0801
