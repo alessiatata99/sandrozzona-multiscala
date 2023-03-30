@@ -34,8 +34,8 @@ emstep                   = 0.01
 nstxout                  = 500
 nstvout                  = 500
 nstlog                   = 5000
-nstcalcenergy            = 10
-nstenergy                = 10
+nstcalcenergy            = 500
+nstenergy                = 500
 energygrps               = 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;, Temperature coupling  

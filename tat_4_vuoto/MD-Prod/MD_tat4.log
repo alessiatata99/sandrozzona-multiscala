@@ -1,0 +1,2400 @@
+              :-) GROMACS - gmx mdrun, 2020.1-Ubuntu-2020.1-1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.1-Ubuntu-2020.1-1
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /content
+Process ID:   6292
+Command line:
+  gmx mdrun -s sandrozzona-multiscala/tat_4_vuoto/MD-Prod/prod_MD_tat4.tpr -deffnm sandrozzona-multiscala/tat_4_vuoto/MD-Prod/MD_tat4 -v -nt 12
+
+GROMACS version:    2020.1-Ubuntu-2020.1-1
+Precision:          single
+Memory model:       64 bit
+MPI library:        thread_mpi
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        disabled
+SIMD instructions:  SSE2
+FFT library:        fftw-3.3.8-sse2-avx
+RDTSCP usage:       disabled
+TNG support:        enabled
+Hwloc support:      hwloc-2.1.0
+Tracing support:    disabled
+C compiler:         /usr/bin/cc GNU 9.3.0
+C compiler flags:   -msse2 -fexcess-precision=fast -funroll-all-loops
+C++ compiler:       /usr/bin/c++ GNU 9.3.0
+C++ compiler flags: -msse2 -fexcess-precision=fast -funroll-all-loops -fopenmp
+
+
+Running on 1 node with total 1 cores, 2 logical cores
+Hardware detected:
+  CPU info:
+    Vendor: Intel
+    Brand:  Intel(R) Xeon(R) CPU @ 2.20GHz
+    Family: 6   Model: 79   Stepping: 0
+    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 x2apic
+  Hardware topology: Full, with devices
+    Sockets, cores, and logical processors:
+      Socket  0: [   0   1]
+    Numa nodes:
+      Node  0 (13616332800 bytes mem):   0   1
+      Latency:
+               0
+         0  1.00
+    Caches:
+      L1: 32768 bytes, linesize 64 bytes, assoc. 8, shared 2 ways
+      L2: 262144 bytes, linesize 64 bytes, assoc. 8, shared 2 ways
+      L3: 57671680 bytes, linesize 64 bytes, assoc. 20, shared 2 ways
+    PCI devices:
+      0000:00:04.0  Id: 1af4:1000  Class: 0x0200  Numa: 0
+
+Highest SIMD level requested by all nodes in run: AVX2_256
+SIMD instructions selected at compile time:       SSE2
+This program was compiled for different hardware than you are running on,
+which could influence performance.
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = md
+   tinit                          = 0
+   dt                             = 0.004
+   nsteps                         = 500000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Angular
+   nstcomm                        = 500
+   bd-fric                        = 0
+   ld-seed                        = 183334270
+   emtol                          = 10
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 500
+   nstvout                        = 500
+   nstfout                        = 0
+   nstlog                         = 5000
+   nstcalcenergy                  = 500
+   nstenergy                      = 500
+   nstxout-compressed             = 0
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Verlet
+   nstlist                        = 10
+   pbc                            = xyz
+   periodic-molecules             = false
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1.058
+   coulombtype                    = Cut-off
+   coulomb-modifier               = Potential-shift
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = Potential-shift
+   rvdw-switch                    = 0
+   rvdw                           = 1
+   DispCorr                       = No
+   table-extension                = 1
+   fourierspacing                 = 0.12
+   fourier-nx                     = 0
+   fourier-ny                     = 0
+   fourier-nz                     = 0
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   tcoupl                         = V-rescale
+   nsttcouple                     = 10
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = false
+   pcoupl                         = No
+   pcoupltype                     = Isotropic
+   nstpcouple                     = -1
+   tau-p                          = 1
+   compressibility (3x3):
+      compressibility[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   ref-p (3x3):
+      ref-p[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = false
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = false
+   Shake-SOR                      = false
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = false
+   awh                            = false
+   rotation                       = false
+   interactiveMD                  = false
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = false
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = false
+   swapcoords                     = no
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+   applied-forces:
+     electric-field:
+       x:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       y:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       z:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+     density-guided-simulation:
+       active                     = false
+       group                      = protein
+       similarity-measure         = inner-product
+       atom-spreading-weight      = unity
+       force-constant             = 1e+09
+       gaussian-transform-spreading-width = 0.2
+       gaussian-transform-spreading-range-in-multiples-of-width = 4
+       reference-density-filename = reference.mrc
+       nst                        = 1
+       normalize-densities        = true
+       adaptive-force-scaling     = false
+       adaptive-force-scaling-time-constant = 4
+grpopts:
+   nrdf:         466
+   ref-t:         300
+   tau-t:         0.1
+annealing:          No
+annealing-npoints:           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp-flags[  0]: 0
+
+Changing nstlist from 10 to 25, rlist from 1.058 to 1.18
+
+
+Using 1 MPI thread
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 12 OpenMP threads 
+
+
+WARNING: Oversubscribing the available 2 logical CPU cores with 12 threads.
+         This will cause considerable performance loss.
+System total charge: 8.000
+Potential shift: LJ r^-12: -1.000e+00 r^-6: -1.000e+00, Coulomb -1e+00
+Generated table with 1089 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1089 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1089 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+
+Using SIMD 4x4 nonbonded short-range kernels
+
+Using a dual 4x4 pair-list setup updated with dynamic pruning:
+  outer list: updated every 25 steps, buffer 0.180 nm, rlist 1.180 nm
+  inner list: updated every  4 steps, buffer 0.015 nm, rlist 1.015 nm
+At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
+  outer list: updated every 25 steps, buffer 0.230 nm, rlist 1.230 nm
+  inner list: updated every  4 steps, buffer 0.021 nm, rlist 1.021 nm
+
+Using Lorentz-Berthelot Lennard-Jones combination rule
+
+Removing pbc first time
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 236
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+G. Bussi, D. Donadio and M. Parrinello
+Canonical sampling through velocity rescaling
+J. Chem. Phys. 126 (2007) pp. 014101
+-------- -------- --- Thank You --- -------- --------
+
+There are: 236 Atoms
+
+Constraining the starting coordinates (step 0)
+
+Constraining the coordinates at t0-dt (step 0)
+Center of mass motion removal mode is Angular
+We have the following groups for center of mass motion removal:
+  0:  rest
+RMS relative constraint deviation after constraining: 1.92e-06
+Initial temperature: 0.000623565 K
+
+Started mdrun on rank 0 Thu Mar 30 13:20:14 2023
+
+           Step           Time
+              0        0.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.24856e+02    3.79358e+02    8.03696e+00    1.70891e+02   -3.75506e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -2.25676e+02   -6.39428e+02   -3.93702e+03    5.30027e-01   -3.93649e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.93649e+03    2.73595e-01    2.67660e+01    9.90671e-05
+
+Group rest with mass  1.56797e+03, Ekrot  2.05224e+00 Det(I) =  3.57993e+07
+  COM:      3.02183       3.10658       1.47125
+  P:        0.00002      -0.00010       0.00002
+  V:        0.00000      -0.00000       0.00000
+  J:       -0.00025      17.68438      51.71998
+  w:        0.00373       0.02127       0.07209
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 5.69702e+02, -4.73223e+01,  4.37827e+01}
+   Inertia tensor[    1]={-4.73223e+01,  1.63828e+02,  4.68169e+01}
+   Inertia tensor[    2]={ 4.37827e+01,  4.68169e+01,  4.12278e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.28859e+00 Det(I) =  2.29888e+07
+  COM:      3.09598       3.10658       1.47125
+  P:       -0.00015       0.00010      -0.00005
+  V:       -0.00000       0.00000      -0.00000
+  J:        0.00033      25.29165     -45.25262
+  w:       -0.00446       0.02594      -0.08665
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.38375e+02, -6.83701e+01,  1.20093e+01}
+   Inertia tensor[    1]={-6.83701e+01,  1.67885e+02,  5.54663e+01}
+   Inertia tensor[    2]={ 1.20093e+01,  5.54663e+01,  4.63140e+02}
+Group rest with mass  1.56797e+03, Ekrot  3.18540e+00 Det(I) =  3.31489e+07
+  COM:      3.06426       3.10658       1.47125
+  P:        0.00022       0.00007      -0.00018
+  V:        0.00000       0.00000      -0.00000
+  J:       -0.00015      16.52919      58.96377
+  w:        0.00107       0.01825       0.10293
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 4.31637e+02, -1.34170e+01,  9.43555e+00}
+   Inertia tensor[    1]={-1.34170e+01,  1.43371e+02,  1.15747e+01}
+   Inertia tensor[    2]={ 9.43555e+00,  1.15747e+01,  5.38414e+02}
+Group rest with mass  1.56797e+03, Ekrot  6.89277e+00 Det(I) =  6.33160e+07
+  COM:      3.00078       3.09592       1.48633
+  P:       -0.00010       0.00001       0.00015
+  V:       -0.00000       0.00000       0.00000
+  J:       -1.23605    -102.89423      59.13043
+  w:       -0.01426      -0.08578       0.08358
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 6.06397e+02,  1.42432e+01, -1.09762e+02}
+   Inertia tensor[    1]={ 1.42432e+01,  1.71169e+02, -5.00024e+01}
+   Inertia tensor[    2]={-1.09762e+02, -5.00024e+01,  6.44229e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.21543e+00 Det(I) =  6.73357e+07
+  COM:      2.97172       3.10658       1.47125
+  P:       -0.00015      -0.00019       0.00001
+  V:       -0.00000      -0.00000       0.00000
+  J:        6.86203      34.52006     -34.13973
+  w:        0.01523       0.02574      -0.04212
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 6.83441e+02,  8.11621e+00, -1.20269e+02}
+   Inertia tensor[    1]={ 8.11621e+00,  1.60783e+02,  1.60942e+01}
+   Inertia tensor[    2]={-1.20269e+02,  1.60942e+01,  6.36221e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.29966e+00 Det(I) =  6.00203e+07
+  COM:      3.01144       3.10658       1.47125
+  P:       -0.00001      -0.00006       0.00008
+  V:       -0.00000      -0.00000       0.00000
+  J:       -0.00006      33.18558      35.26729
+  w:       -0.00417       0.03034       0.04516
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 5.69990e+02,  7.29199e+00, -7.13447e+01}
+   Inertia tensor[    1]={ 7.29199e+00,  2.11037e+02, -9.71924e+00}
+   Inertia tensor[    2]={-7.13447e+01, -9.71924e+00,  5.08485e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.51079e+00 Det(I) =  7.98937e+07
+  COM:      3.01144       3.09591       1.47125
+  P:       -0.00015       0.00011       0.00008
+  V:       -0.00000       0.00000       0.00000
+  J:       -3.06230      -0.60860     -49.95512
+  w:        0.00481      -0.00106      -0.06077
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 5.59146e+02,  2.03574e+01, -1.15930e+02}
+   Inertia tensor[    1]={ 2.03574e+01,  2.72282e+02,  1.08872e+01}
+   Inertia tensor[    2]={-1.15930e+02,  1.08872e+01,  5.51077e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.41323e+00 Det(I) =  5.10981e+07
+  COM:      3.11731       2.99005       1.47125
+  P:       -0.00009      -0.00017       0.00014
+  V:       -0.00000      -0.00000       0.00000
+  J:       56.90455       0.00005       9.13849
+  w:        0.04863      -0.00581       0.00645
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.83976e+02, -7.08643e+01, -8.89019e+01}
+   Inertia tensor[    1]={-7.08643e+01,  6.49984e+02, -9.71934e+01}
+   Inertia tensor[    2]={-8.89019e+01, -9.71934e+01,  5.16743e+02}
+           Step           Time
+           5000       20.00000
+
+Group rest with mass  1.56797e+03, Ekrot  1.35253e+00 Det(I) =  3.91720e+07
+  COM:      3.11730       3.00071       1.47125
+  P:       -0.00001      -0.00012       0.00004
+  V:       -0.00000      -0.00000       0.00000
+  J:      -42.94439       0.00002      26.57883
+  w:       -0.03979       0.00086       0.03748
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.44027e+02, -7.43057e+01, -7.86875e+01}
+   Inertia tensor[    1]={-7.43057e+01,  6.47270e+02, -6.39521e+01}
+   Inertia tensor[    2]={-7.86875e+01, -6.39521e+01,  5.07583e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.10689e+02    4.82329e+02    2.98786e+01    1.81253e+02   -3.77380e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.48982e+02   -9.16260e+02   -3.63489e+03    5.65276e+02   -3.06961e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.35604e+03    2.91790e+02    5.89182e+01    2.06528e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.88988e+00 Det(I) =  4.51588e+07
+  COM:      3.11730       2.99005       1.47125
+  P:       -0.00014       0.00015      -0.00005
+  V:       -0.00000       0.00000      -0.00000
+  J:       11.82124       0.00039     -52.59508
+  w:        0.01327       0.00571      -0.06888
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.47426e+02, -5.10654e+01, -5.70796e+01}
+   Inertia tensor[    1]={-5.10654e+01,  6.32617e+02, -6.61992e+01}
+   Inertia tensor[    2]={-5.70796e+01, -6.61992e+01,  5.32250e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.16469e+00 Det(I) =  3.70426e+07
+  COM:      3.11731       3.06420       1.47125
+  P:        0.00018      -0.00004       0.00000
+  V:        0.00000      -0.00000       0.00000
+  J:      -24.38475      -0.00020     -47.00706
+  w:       -0.02648       0.00518      -0.07836
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.83120e+02, -4.34102e+01, -4.21338e+00}
+   Inertia tensor[    1]={-4.34102e+01,  4.17334e+02, -3.04805e+01}
+   Inertia tensor[    2]={-4.21338e+00, -3.04805e+01,  4.99495e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.03934e+00 Det(I) =  3.22401e+07
+  COM:      3.11730       2.99005       1.47125
+  P:        0.00005      -0.00009      -0.00004
+  V:        0.00000      -0.00000      -0.00000
+  J:       44.85139       0.00055     -40.07273
+  w:        0.04139      -0.00500      -0.05546
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.05708e+02, -4.01250e+01, -6.86104e+01}
+   Inertia tensor[    1]={-4.01250e+01,  6.70387e+02,  2.56045e+01}
+   Inertia tensor[    2]={-6.86104e+01,  2.56045e+01,  5.10058e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.78968e+00 Det(I) =  2.09782e+07
+  COM:      3.11730       3.06419       1.47125
+  P:        0.00009       0.00001      -0.00014
+  V:        0.00000       0.00000      -0.00000
+  J:      -15.01151       0.00002      53.09919
+  w:       -0.02342       0.00863       0.09845
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.02925e+02, -1.71201e+01, -7.52842e+01}
+   Inertia tensor[    1]={-1.71201e+01,  4.58628e+02,  4.92295e+01}
+   Inertia tensor[    2]={-7.52842e+01,  4.92295e+01,  5.05213e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.73167e+00 Det(I) =  4.95569e+07
+  COM:      3.11730       2.99005       1.47125
+  P:       -0.00021       0.00016      -0.00010
+  V:       -0.00000       0.00000      -0.00000
+  J:       63.19554       0.00022      -2.90710
+  w:        0.05451      -0.00454      -0.00636
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.53500e+02, -5.69053e+01, -3.66934e+01}
+   Inertia tensor[    1]={-5.69053e+01,  6.24622e+02,  1.00068e+01}
+   Inertia tensor[    2]={-3.66934e+01,  1.00068e+01,  5.43726e+02}
+Group rest with mass  1.56797e+03, Ekrot  4.53606e+00 Det(I) =  3.94532e+07
+  COM:      3.11730       2.99005       1.47125
+  P:       -0.00019      -0.00021       0.00018
+  V:       -0.00000      -0.00000       0.00000
+  J:      -75.94298      -0.00031      48.83151
+  w:       -0.07610       0.01003       0.06743
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.59157e+02, -5.32354e+01, -3.75659e+01}
+   Inertia tensor[    1]={-5.32354e+01,  6.11420e+02,  2.70776e+01}
+   Inertia tensor[    2]={-3.75659e+01,  2.70776e+01,  4.26813e+02}
+           Step           Time
+          10000       40.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.52849e+02    4.71843e+02    2.22056e+01    1.80435e+02   -3.73138e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.81159e+02   -9.24774e+02   -3.70998e+03    5.78166e+02   -3.13181e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.85016e+03    2.98444e+02   -2.99126e+02    2.90956e-04
+
+Group rest with mass  1.56797e+03, Ekrot  2.30784e+00 Det(I) =  2.96132e+07
+  COM:      3.11730       3.06419       1.47125
+  P:        0.00004       0.00002      -0.00003
+  V:        0.00000       0.00000      -0.00000
+  J:      -22.13874      -0.00034     -50.18295
+  w:       -0.01770      -0.00900      -0.08417
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.59306e+02, -3.18350e+01, -6.88706e+01}
+   Inertia tensor[    1]={-3.18350e+01,  4.30403e+02,  7.46846e+01}
+   Inertia tensor[    2]={-6.88706e+01,  7.46846e+01,  4.76901e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.28447e+00 Det(I) =  4.14246e+07
+  COM:      3.11730       3.00071       1.47125
+  P:        0.00013       0.00006      -0.00002
+  V:        0.00000       0.00000      -0.00000
+  J:      -52.35470      -0.00009      -5.57663
+  w:       -0.04873       0.00441      -0.00314
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.61191e+02, -5.82178e+01, -5.82974e+01}
+   Inertia tensor[    1]={-5.82178e+01,  6.32563e+02,  5.54048e+01}
+   Inertia tensor[    2]={-5.82974e+01,  5.54048e+01,  4.43250e+02}
+Group rest with mass  1.56797e+03, Ekrot  3.05655e+00 Det(I) =  3.87327e+07
+  COM:      3.11730       3.00071       1.47125
+  P:       -0.00003       0.00031       0.00019
+  V:       -0.00000       0.00000       0.00000
+  J:      -66.04911       0.00002      33.92035
+  w:       -0.06618       0.01074       0.05135
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.58675e+02, -3.07979e+01, -7.67241e+01}
+   Inertia tensor[    1]={-3.07979e+01,  6.18787e+02,  8.63359e+01}
+   Inertia tensor[    2]={-7.67241e+01,  8.63359e+01,  4.43759e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.11910e+00 Det(I) =  5.17304e+07
+  COM:      3.10664       3.00071       1.47125
+  P:       -0.00018       0.00006      -0.00005
+  V:       -0.00000       0.00000      -0.00000
+  J:      -47.75955      10.35668      34.69346
+  w:       -0.04860       0.02119       0.04893
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.97124e+02, -3.52637e+01, -6.59390e+01}
+   Inertia tensor[    1]={-3.52637e+01,  5.95460e+02,  4.17783e+01}
+   Inertia tensor[    2]={-6.59390e+01,  4.17783e+01,  4.69013e+02}
+Group rest with mass  1.56797e+03, Ekrot  5.43849e+00 Det(I) =  2.02316e+07
+  COM:      3.11730       3.10658       1.47125
+  P:       -0.00009      -0.00018      -0.00008
+  V:       -0.00000      -0.00000      -0.00000
+  J:       88.32599     -10.66244      -8.32376
+  w:        0.11864      -0.01001      -0.03494
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.66481e+02,  4.17568e+01, -5.88276e+01}
+   Inertia tensor[    1]={ 4.17568e+01,  2.77773e+02,  2.20513e+01}
+   Inertia tensor[    2]={-5.88276e+01,  2.20513e+01,  4.80492e+02}
+Group rest with mass  1.56797e+03, Ekrot  3.29330e+00 Det(I) =  4.86000e+07
+  COM:      3.09598       3.05353       1.47125
+  P:        0.00006       0.00009       0.00009
+  V:        0.00000       0.00000       0.00000
+  J:       69.20680       7.52889     -25.46708
+  w:        0.07813       0.01304      -0.04245
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.39297e+02,  3.79102e+00, -5.17720e+01}
+   Inertia tensor[    1]={ 3.79102e+00,  4.64379e+02, -2.74761e+01}
+   Inertia tensor[    2]={-5.17720e+01, -2.74761e+01,  4.50135e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.21978e+00 Det(I) =  4.87659e+07
+  COM:      3.10664       3.00071       1.47125
+  P:        0.00020       0.00010       0.00013
+  V:        0.00000       0.00000       0.00000
+  J:      -48.26088      -6.83435     -13.39058
+  w:       -0.04568      -0.00875      -0.01309
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.00418e+02, -3.32793e+01, -6.13203e+01}
+   Inertia tensor[    1]={-3.32793e+01,  6.13811e+02,  7.92822e+00}
+   Inertia tensor[    2]={-6.13203e+01,  7.92822e+00,  4.18782e+02}
+           Step           Time
+          15000       60.00000
+
+Group rest with mass  1.56797e+03, Ekrot  3.40436e+00 Det(I) =  3.91298e+07
+  COM:      3.11730       2.99005       1.47125
+  P:        0.00010      -0.00023      -0.00011
+  V:        0.00000      -0.00000      -0.00000
+  J:      -83.61005      -0.00003     -22.53731
+  w:       -0.07597       0.00232      -0.02029
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.57438e+02, -3.67158e+01, -8.11631e+01}
+   Inertia tensor[    1]={-3.67158e+01,  6.41642e+02,  6.92656e+01}
+   Inertia tensor[    2]={-8.11631e+01,  6.92656e+01,  4.38434e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.29764e+02    5.20663e+02    4.62675e+01    1.96791e+02   -3.74154e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.41497e+02   -1.01501e+03   -3.60456e+03    5.42932e+02   -3.06163e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -5.31736e+03    2.80256e+02    6.10035e+01    2.09975e-04
+
+Group rest with mass  1.56797e+03, Ekrot  2.63472e+00 Det(I) =  5.08695e+07
+  COM:      3.11730       2.95033       1.47125
+  P:       -0.00002       0.00005      -0.00001
+  V:       -0.00000       0.00000      -0.00000
+  J:       66.50614      -0.00003      40.43245
+  w:        0.05507       0.00253       0.03975
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.79809e+02, -3.57686e+01, -5.94858e+01}
+   Inertia tensor[    1]={-3.57686e+01,  7.60526e+02,  8.66006e+01}
+   Inertia tensor[    2]={-5.94858e+01,  8.66006e+01,  4.02604e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.95493e+00 Det(I) =  2.52594e+07
+  COM:      3.11730       3.09591       1.47125
+  P:       -0.00003      -0.00003      -0.00013
+  V:       -0.00000      -0.00000      -0.00000
+  J:      -58.26119      -0.00018      20.14404
+  w:       -0.08699       0.01704       0.04180
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.40831e+02, -7.66553e+01, -2.53345e+01}
+   Inertia tensor[    1]={-7.66553e+01,  3.29845e+02,  8.82910e+01}
+   Inertia tensor[    2]={-2.53345e+01,  8.82910e+01,  3.67118e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.19779e+00 Det(I) =  3.15058e+07
+  COM:      3.11730       3.06419       1.47125
+  P:       -0.00006      -0.00007      -0.00001
+  V:       -0.00000      -0.00000      -0.00000
+  J:       -2.49708       0.00026      39.15791
+  w:       -0.00530       0.01143       0.06084
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.11165e+02, -6.69834e+01, -1.79795e+01}
+   Inertia tensor[    1]={-6.69834e+01,  4.53387e+02,  1.03077e+02}
+   Inertia tensor[    2]={-1.79795e+01,  1.03077e+02,  3.68731e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.81369e+00 Det(I) =  5.73004e+07
+  COM:      3.11730       2.90795       1.47125
+  P:       -0.00014       0.00013      -0.00003
+  V:       -0.00000       0.00000      -0.00000
+  J:      -49.29500       0.00011     -44.94200
+  w:       -0.03749      -0.00768      -0.03959
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.96067e+02, -3.47324e+01, -3.27310e+01}
+   Inertia tensor[    1]={-3.47324e+01,  9.34558e+02,  1.36620e+02}
+   Inertia tensor[    2]={-3.27310e+01,  1.36620e+02,  3.38684e+02}
+Group rest with mass  1.56797e+03, Ekrot  4.69986e+00 Det(I) =  4.47477e+07
+  COM:      3.11730       2.92661       1.47125
+  P:       -0.00001      -0.00017       0.00006
+  V:       -0.00000      -0.00000       0.00000
+  J:      -76.06335      -0.00053     -73.49348
+  w:       -0.05675      -0.00945      -0.06917
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.37724e+02, -3.44775e+01, -3.81138e+01}
+   Inertia tensor[    1]={-3.44775e+01,  9.07097e+02,  9.91958e+01}
+   Inertia tensor[    2]={-3.81138e+01,  9.91958e+01,  3.81121e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.62100e+00 Det(I) =  3.95962e+07
+  COM:      3.11730       2.96100       1.47125
+  P:        0.00011      -0.00006       0.00018
+  V:        0.00000      -0.00000       0.00000
+  J:       12.39673      -0.00015     -67.44098
+  w:        0.01359      -0.01454      -0.07523
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.72147e+02, -4.08818e+01, -2.05405e+01}
+   Inertia tensor[    1]={-4.08818e+01,  7.45172e+02,  8.86748e+01}
+   Inertia tensor[    2]={-2.05405e+01,  8.86748e+01,  3.24744e+02}
+           Step           Time
+          20000       80.00000
+
+Group rest with mass  1.56797e+03, Ekrot  1.60838e+00 Det(I) =  2.51177e+07
+  COM:      3.11730       3.05353       1.47125
+  P:        0.00010       0.00002      -0.00001
+  V:        0.00000       0.00000      -0.00000
+  J:       37.94614       0.00044      33.01529
+  w:        0.04300       0.00590       0.04801
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.68271e+02, -3.20225e+01, -4.75981e+01}
+   Inertia tensor[    1]={-3.20225e+01,  4.87855e+02,  9.07402e+01}
+   Inertia tensor[    2]={-4.75981e+01,  9.07402e+01,  3.37155e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.60181e+02    4.66065e+02    2.81828e+01    1.92548e+02   -3.71786e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.91159e+02   -9.81886e+02   -3.74393e+03    6.43622e+02   -3.10031e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -5.76550e+03    3.32232e+02   -1.27407e+02    2.24996e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.48991e+00 Det(I) =  3.74395e+07
+  COM:      3.11730       2.99272       1.47125
+  P:        0.00002      -0.00003      -0.00009
+  V:        0.00000      -0.00000      -0.00000
+  J:      -53.77219       0.00009     -14.39803
+  w:       -0.05171      -0.00028      -0.01383
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.75507e+02, -2.91133e+01, -5.26865e+01}
+   Inertia tensor[    1]={-2.91133e+01,  6.71221e+02,  1.19502e+02}
+   Inertia tensor[    2]={-5.26865e+01,  1.19502e+02,  3.54342e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.81201e+00 Det(I) =  2.62348e+07
+  COM:      3.11730       3.06419       1.47125
+  P:        0.00026       0.00005      -0.00007
+  V:        0.00000       0.00000      -0.00000
+  J:      -17.00667      -0.00031      43.21448
+  w:       -0.02469       0.01133       0.07414
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.70718e+02, -5.20967e+01, -3.44751e+01}
+   Inertia tensor[    1]={-5.20967e+01,  4.33876e+02,  6.71699e+01}
+   Inertia tensor[    2]={-3.44751e+01,  6.71699e+01,  3.82299e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.97352e+00 Det(I) =  2.49426e+07
+  COM:      3.11730       3.05353       1.47125
+  P:       -0.00021      -0.00005      -0.00013
+  V:       -0.00000      -0.00000      -0.00000
+  J:       54.63882       0.00004      20.12967
+  w:        0.06301      -0.00079       0.02506
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.64296e+02, -4.61484e+01, -6.29028e+01}
+   Inertia tensor[    1]={-4.61484e+01,  4.77606e+02,  9.93042e+01}
+   Inertia tensor[    2]={-6.29028e+01,  9.93042e+01,  3.65160e+02}
+Group rest with mass  1.56797e+03, Ekrot  3.12495e+00 Det(I) =  3.19028e+07
+  COM:      3.11730       2.99271       1.47125
+  P:        0.00003      -0.00005       0.00001
+  V:        0.00000      -0.00000       0.00000
+  J:      -64.24895      -0.00002      40.54631
+  w:       -0.06280       0.01384       0.05463
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.31863e+02, -2.57412e+01, -3.55859e+01}
+   Inertia tensor[    1]={-2.57412e+01,  6.76812e+02,  1.00799e+02}
+   Inertia tensor[    2]={-3.55859e+01,  1.00799e+02,  3.82856e+02}
+           Step           Time
+          25000      100.00000
+
+Group rest with mass  1.56797e+03, Ekrot  4.43927e+00 Det(I) =  2.54801e+07
+  COM:      3.11731       3.05353       1.47125
+  P:        0.00003      -0.00007       0.00013
+  V:        0.00000      -0.00000       0.00000
+  J:      -79.09773       0.00031     -39.20859
+  w:       -0.08218      -0.01831      -0.06066
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.27948e+02,  1.28643e+01, -1.76372e+01}
+   Inertia tensor[    1]={ 1.28643e+01,  5.38614e+02,  1.46096e+02}
+   Inertia tensor[    2]={-1.76372e+01,  1.46096e+02,  4.13747e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.25928e+02    5.36358e+02    2.99803e+01    2.01504e+02   -3.77597e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.70688e+02   -9.66328e+02   -3.71922e+03    6.01590e+02   -3.11763e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -6.24634e+03    3.10535e+02   -7.01972e+01    2.20726e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.12580e+00 Det(I) =  2.42538e+07
+  COM:      3.11731       3.06419       1.47125
+  P:        0.00003       0.00006      -0.00002
+  V:        0.00000       0.00000      -0.00000
+  J:       34.41407       0.00005      22.04257
+  w:        0.04020       0.00663       0.03938
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.35214e+02,  2.69180e+01,  2.34473e+00}
+   Inertia tensor[    1]={ 2.69180e+01,  4.38084e+02,  6.67393e+01}
+   Inertia tensor[    2]={ 2.34473e+00,  6.67393e+01,  4.24711e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.16999e+00 Det(I) =  2.65782e+07
+  COM:      3.11731       3.06419       1.47125
+  P:        0.00007       0.00011       0.00023
+  V:        0.00000       0.00000       0.00000
+  J:       57.18077      -0.00001      16.46174
+  w:        0.06691       0.00592       0.03121
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.46606e+02,  2.72891e+01,  1.58438e+01}
+   Inertia tensor[    1]={ 2.72891e+01,  4.24834e+02,  5.27158e+01}
+   Inertia tensor[    2]={ 1.58438e+01,  5.27158e+01,  4.39506e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.28286e+00 Det(I) =  1.61721e+07
+  COM:      3.11731       3.10658       1.47125
+  P:       -0.00007      -0.00019       0.00012
+  V:       -0.00000      -0.00000       0.00000
+  J:        2.39072       0.00014     -32.64739
+  w:       -0.00060      -0.01011      -0.07863
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.55306e+02,  7.27217e+01,  2.66992e+01}
+   Inertia tensor[    1]={ 7.27217e+01,  2.70252e+02,  7.90854e+01}
+   Inertia tensor[    2]={ 2.66992e+01,  7.90854e+01,  4.64218e+02}
+           Step           Time
+          30000      120.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.82805e+02    5.09137e+02    4.03338e+01    1.83506e+02   -3.77625e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.51142e+02   -9.53087e+02   -3.66470e+03    6.03167e+02   -3.06153e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -6.70022e+03    3.11349e+02   -6.68524e+01    2.48601e-04
+
+           Step           Time
+          35000      140.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.23400e+02    4.88321e+02    3.53589e+01    1.92639e+02   -3.80090e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.35489e+02   -9.76784e+02   -3.67345e+03    5.66727e+02   -3.10673e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -7.15990e+03    2.92539e+02   -4.76941e+01    2.18502e-04
+
+           Step           Time
+          40000      160.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.32312e+02    4.95005e+02    3.99541e+01    1.98636e+02   -3.71821e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.16894e+02   -1.08867e+03   -3.75787e+03    6.78904e+02   -3.07896e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -7.63903e+03    3.50444e+02    1.08817e+02    1.86819e-04
+
+           Step           Time
+          45000      180.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.26756e+02    4.24813e+02    2.35967e+01    1.95972e+02   -3.77960e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.85906e+02   -8.52568e+02   -3.74693e+03    5.48449e+02   -3.19849e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -8.06001e+03    2.83104e+02   -2.83402e+01    2.07502e-04
+
+           Step           Time
+          50000      200.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.20291e+02    4.73940e+02    3.05154e+01    1.92114e+02   -3.77278e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.29347e+02   -1.00056e+03   -3.78583e+03    5.77584e+02   -3.20824e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -8.50171e+03    2.98143e+02    2.59755e+02    2.02137e-04
+
+           Step           Time
+          55000      220.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.39961e+02    4.98380e+02    3.51009e+01    1.75045e+02   -3.76705e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.83673e+02   -1.00943e+03   -3.71167e+03    5.89440e+02   -3.12223e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -8.94382e+03    3.04263e+02   -3.80348e+02    2.53992e-04
+
+           Step           Time
+          60000      240.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.33383e+02    4.77661e+02    3.44051e+01    1.82403e+02   -3.81352e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.93830e+02   -9.22103e+02   -3.70160e+03    6.11980e+02   -3.08962e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -9.35630e+03    3.15898e+02   -2.05987e+00    1.98406e-04
+
+           Step           Time
+          65000      260.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.32130e+02    4.86804e+02    3.62594e+01    1.76990e+02   -3.77992e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.77046e+02   -9.31358e+02   -3.65614e+03    6.03309e+02   -3.05283e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -9.84497e+03    3.11422e+02   -1.97855e+02    2.34302e-04
+
+           Step           Time
+          70000      280.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.33480e+02    4.70204e+02    3.70213e+01    2.02777e+02   -3.74729e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.52477e+02   -9.65359e+02   -3.72164e+03    6.23438e+02   -3.09820e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.02824e+04    3.21813e+02    3.89753e+01    2.20672e-04
+
+           Step           Time
+          75000      300.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.26199e+02    4.19881e+02    3.23610e+01    2.09739e+02   -3.77041e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.25343e+02   -9.82045e+02   -3.68962e+03    6.53393e+02   -3.03622e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.07285e+04    3.37275e+02    3.84287e+02    1.92874e-04
+
+           Step           Time
+          80000      320.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.97368e+02    4.79930e+02    4.68783e+01    2.02187e+02   -3.82242e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.78901e+02   -9.19788e+02   -3.69475e+03    5.82843e+02   -3.11190e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.11463e+04    3.00858e+02    1.38439e+02    2.03500e-04
+
+           Step           Time
+          85000      340.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.33895e+02    4.79780e+02    3.63754e+01    1.96333e+02   -3.75880e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.52026e+02   -9.79891e+02   -3.74433e+03    5.67640e+02   -3.17669e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.15889e+04    2.93010e+02    4.58950e+01    1.89521e-04
+
+           Step           Time
+          90000      360.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.00597e+02    4.73142e+02    2.55408e+01    1.94006e+02   -3.78522e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.57493e+02   -9.52832e+02   -3.70226e+03    5.89622e+02   -3.11264e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.20326e+04    3.04357e+02   -5.17327e+01    2.44476e-04
+
+           Step           Time
+          95000      380.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.80481e+02    4.60305e+02    4.03994e+01    2.13429e+02   -3.73179e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.42885e+02   -1.03033e+03   -3.71040e+03    5.34797e+02   -3.17560e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.24966e+04    2.76057e+02    3.43706e+01    1.94248e-04
+
+           Step           Time
+         100000      400.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.52052e+02    5.15191e+02    4.86798e+01    1.85405e+02   -3.83962e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.92464e+02   -9.13903e+02   -3.64466e+03    5.81748e+02   -3.06292e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.29321e+04    3.00293e+02   -5.10022e+01    2.18213e-04
+
+           Step           Time
+         105000      420.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.63324e+02    4.68240e+02    2.07336e+01    1.96316e+02   -3.79839e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.94790e+02   -8.92238e+02   -3.73680e+03    5.99693e+02   -3.13711e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.33539e+04    3.09556e+02    2.60457e+02    1.79732e-04
+
+           Step           Time
+         110000      440.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.71040e+02    4.77200e+02    3.09567e+01    1.89122e+02   -3.72708e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -2.04784e+02   -9.60971e+02   -3.72451e+03    5.78288e+02   -3.14622e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.38137e+04    2.98507e+02   -2.35557e+02    2.30420e-04
+
+           Step           Time
+         115000      460.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.51966e+02    4.87611e+02    3.08696e+01    1.86814e+02   -3.70965e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.87622e+02   -9.88925e+02   -3.72894e+03    6.12166e+02   -3.11678e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.42697e+04    3.15994e+02   -2.34076e+02    2.18556e-04
+
+           Step           Time
+         120000      480.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.39461e+02    4.80224e+02    3.99429e+01    1.94180e+02   -3.80101e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.77400e+02   -9.35232e+02   -3.75983e+03    5.83690e+02   -3.17614e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.46975e+04    3.01295e+02   -2.32599e+01    2.01479e-04
+
+           Step           Time
+         125000      500.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.08039e+02    5.06698e+02    3.22148e+01    1.54210e+02   -3.82533e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.57210e+02   -9.72661e+02   -3.75404e+03    6.19004e+02   -3.13504e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.51177e+04    3.19524e+02   -3.25133e+02    2.58734e-04
+
+           Step           Time
+         130000      520.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.58433e+02    4.78248e+02    3.19321e+01    2.07396e+02   -3.74980e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.70046e+02   -1.00630e+03   -3.75013e+03    5.98291e+02   -3.15184e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.55421e+04    3.08832e+02    1.29017e+02    1.92556e-04
+
+           Step           Time
+         135000      540.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.64125e+02    4.95120e+02    2.91754e+01    1.83924e+02   -3.80671e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -2.09285e+02   -9.18932e+02   -3.76258e+03    5.39370e+02   -3.22321e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.59965e+04    2.78418e+02    1.54175e+02    1.70531e-04
+
+           Step           Time
+         140000      560.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.58450e+02    5.38536e+02    3.08695e+01    1.84692e+02   -3.80236e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.81517e+02   -9.49935e+02   -3.72127e+03    6.23257e+02   -3.09801e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.64284e+04    3.21719e+02    9.95006e+00    2.05495e-04
+
+           Step           Time
+         145000      580.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.39115e+02    4.69759e+02    2.43454e+01    1.97262e+02   -3.77531e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.50535e+02   -9.44228e+02   -3.73959e+03    5.32923e+02   -3.20667e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.68480e+04    2.75090e+02    1.17201e+02    1.66974e-04
+
+           Step           Time
+         150000      600.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.84275e+02    4.80771e+02    1.93576e+01    1.85142e+02   -3.75550e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.80359e+02   -9.71814e+02   -3.73812e+03    6.35680e+02   -3.10244e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.72646e+04    3.28132e+02   -1.93602e+02    2.27497e-04
+
+           Step           Time
+         155000      620.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.62440e+02    4.66900e+02    3.85515e+01    2.02994e+02   -3.77665e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.42360e+02   -9.96936e+02   -3.74506e+03    5.64302e+02   -3.18076e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.76913e+04    2.91287e+02   -3.81827e+01    2.06317e-04
+
+           Step           Time
+         160000      640.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.44671e+02    4.85303e+02    2.02316e+01    2.03478e+02   -3.76338e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.78363e+02   -9.63433e+02   -3.75149e+03    5.29719e+02   -3.22177e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.81092e+04    2.73436e+02   -6.91943e+01    1.94847e-04
+
+           Step           Time
+         165000      660.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.37559e+02    4.65407e+02    3.08231e+01    1.97619e+02   -3.75139e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.57353e+02   -1.01125e+03   -3.78858e+03    5.95376e+02   -3.19321e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.85306e+04    3.07327e+02    1.08975e+02    1.87995e-04
+
+           Step           Time
+         170000      680.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.89508e+02    4.75047e+02    2.69560e+01    1.99296e+02   -3.74404e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.79871e+02   -9.81547e+02   -3.71465e+03    5.28758e+02   -3.18589e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.89629e+04    2.72940e+02    1.03186e+01    1.99817e-04
+
+           Step           Time
+         175000      700.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.37843e+02    4.84997e+02    3.01756e+01    2.12295e+02   -3.79498e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.50370e+02   -9.57542e+02   -3.73759e+03    5.64206e+02   -3.17338e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.94048e+04    2.91238e+02    1.73165e+02    1.93965e-04
+
+           Step           Time
+         180000      720.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.80950e+02    4.83691e+02    3.44171e+01    1.66011e+02   -3.76558e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.54519e+02   -1.00292e+03   -3.75794e+03    5.21867e+02   -3.23608e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.98545e+04    2.69383e+02   -1.30573e+02    2.29470e-04
+
+           Step           Time
+         185000      740.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.76137e+02    4.76975e+02    2.99017e+01    2.08454e+02   -3.76023e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.71848e+02   -9.45840e+02   -3.68645e+03    5.89005e+02   -3.09745e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.02901e+04    3.04039e+02    7.89194e+01    1.75772e-04
+
+           Step           Time
+         190000      760.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.34451e+02    4.93452e+02    3.78629e+01    1.99297e+02   -3.77381e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.89410e+02   -9.74458e+02   -3.67261e+03    5.46521e+02   -3.12609e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.07072e+04    2.82109e+02    1.86954e+02    1.89570e-04
+
+           Step           Time
+         195000      780.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.20770e+02    4.95715e+02    3.81758e+01    2.05858e+02   -3.73611e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.85898e+02   -9.85256e+02   -3.74675e+03    6.08006e+02   -3.13874e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.11608e+04    3.13847e+02    9.26950e+01    1.79074e-04
+
+           Step           Time
+         200000      800.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.32043e+02    4.79197e+02    3.24253e+01    1.88909e+02   -3.81134e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.68030e+02   -9.62909e+02   -3.80970e+03    5.50540e+02   -3.25916e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.15529e+04    2.84183e+02   -1.00231e+02    2.27731e-04
+
+           Step           Time
+         205000      820.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.32744e+02    4.64082e+02    2.43172e+01    2.06631e+02   -3.79070e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.69848e+02   -9.40365e+02   -3.77314e+03    6.08125e+02   -3.16502e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.19540e+04    3.13908e+02   -1.68337e+01    1.87163e-04
+
+           Step           Time
+         210000      840.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.63293e+02    4.78019e+02    3.70098e+01    2.05806e+02   -3.72717e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.46602e+02   -1.03132e+03   -3.72096e+03    5.54789e+02   -3.16617e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.23760e+04    2.86377e+02   -2.02860e+02    2.20168e-04
+
+           Step           Time
+         215000      860.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.96176e+02    5.03095e+02    3.91278e+01    2.09873e+02   -3.73145e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.83646e+02   -9.90392e+02   -3.65722e+03    5.29563e+02   -3.12766e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.27851e+04    2.73355e+02    2.39935e+02    1.53711e-04
+
+           Step           Time
+         220000      880.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.84413e+02    4.71348e+02    3.68059e+01    1.97168e+02   -3.76476e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.45012e+02   -9.94902e+02   -3.71494e+03    5.32890e+02   -3.18205e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.32248e+04    2.75073e+02    7.54028e+01    1.83602e-04
+
+           Step           Time
+         225000      900.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.80570e+02    4.82113e+02    2.27740e+01    1.91177e+02   -3.75053e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.39814e+02   -1.01829e+03   -3.73201e+03    5.98607e+02   -3.13340e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.37139e+04    3.08995e+02   -3.37434e+01    2.37295e-04
+
+           Step           Time
+         230000      920.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.33457e+02    4.59412e+02    3.85251e+01    1.87768e+02   -3.72029e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.72587e+02   -1.00842e+03   -3.68213e+03    5.92563e+02   -3.08957e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.41281e+04    3.05875e+02   -2.41476e+01    2.04208e-04
+
+           Step           Time
+         235000      940.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.29464e+02    4.55090e+02    4.37183e+01    1.92178e+02   -3.75024e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.50784e+02   -9.96092e+02   -3.77666e+03    5.84043e+02   -3.19262e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.45465e+04    3.01477e+02   -4.63306e+01    1.95111e-04
+
+           Step           Time
+         240000      960.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.29847e+02    4.74050e+02    4.20080e+01    2.08190e+02   -3.76156e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.72716e+02   -9.30793e+02   -3.71098e+03    5.96745e+02   -3.11423e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.49531e+04    3.08034e+02    1.24865e+02    1.94024e-04
+
+           Step           Time
+         245000      980.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.34549e+02    4.87280e+02    4.33421e+01    2.00252e+02   -3.80618e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.63332e+02   -8.97785e+02   -3.70188e+03    5.59163e+02   -3.14271e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.53590e+04    2.88635e+02   -8.72552e+00    1.93693e-04
+
+           Step           Time
+         250000     1000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.03435e+02    4.82330e+02    2.59817e+01    2.02298e+02   -3.74596e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.59996e+02   -1.00807e+03   -3.69998e+03    5.59588e+02   -3.14039e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.57918e+04    2.88854e+02    1.26155e+02    1.93299e-04
+
+           Step           Time
+         255000     1020.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.24380e+02    4.79887e+02    3.43012e+01    1.90774e+02   -3.72114e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.62178e+02   -9.94910e+02   -3.64888e+03    5.83331e+02   -3.06555e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.62211e+04    3.01110e+02   -9.66345e+01    2.13834e-04
+
+           Step           Time
+         260000     1040.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.71891e+02    4.74414e+02    3.02345e+01    1.76472e+02   -3.78725e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.48042e+02   -9.75216e+02   -3.75750e+03    5.92282e+02   -3.16522e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.66517e+04    3.05730e+02   -5.33446e+01    2.29956e-04
+
+           Step           Time
+         265000     1060.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.92928e+02    4.63962e+02    2.47164e+01    1.93938e+02   -3.72576e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.49207e+02   -1.02205e+03   -3.72148e+03    5.68500e+02   -3.15298e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.71183e+04    2.93454e+02    6.65407e+01    1.84991e-04
+
+Group rest with mass  1.56797e+03, Ekrot  2.05757e+00 Det(I) =  2.79438e+07
+  COM:      3.11731       3.08526       1.47125
+  P:        0.00021       0.00001       0.00001
+  V:        0.00000       0.00000       0.00000
+  J:      -47.12004       0.00000      26.26918
+  w:       -0.05848      -0.00196       0.05175
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.62907e+02,  3.57324e+00, -3.87646e+01}
+   Inertia tensor[    1]={ 3.57324e+00,  3.89286e+02, -1.92622e+01}
+   Inertia tensor[    2]={-3.87646e+01, -1.92622e+01,  4.50817e+02}
+           Step           Time
+         270000     1080.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.40511e+02    4.54485e+02    2.80397e+01    2.00432e+02   -3.74288e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.46441e+02   -9.70820e+02   -3.63667e+03    6.14587e+02   -3.02208e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.75435e+04    3.17244e+02    1.85965e+02    1.79619e-04
+
+           Step           Time
+         275000     1100.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    6.07995e+02    4.69924e+02    2.94886e+01    1.86622e+02   -3.83975e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.73892e+02   -9.48043e+02   -3.66765e+03    5.86011e+02   -3.08164e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.80145e+04    3.02493e+02   -4.40774e+02    2.96266e-04
+
+           Step           Time
+         280000     1120.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.33645e+02    4.61184e+02    2.85538e+01    1.99974e+02   -3.72330e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.47854e+02   -1.03186e+03   -3.77966e+03    6.11063e+02   -3.16860e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.84741e+04    3.15425e+02   -8.83391e+01    2.10273e-04
+
+           Step           Time
+         285000     1140.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.30242e+02    5.26087e+02    3.27068e+01    1.87690e+02   -3.87794e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.31232e+02   -9.51236e+02   -3.68368e+03    5.83787e+02   -3.09989e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.89382e+04    3.01345e+02   -9.50554e+01    2.48828e-04
+
+           Step           Time
+         290000     1160.00000
+
+Group rest with mass  1.56797e+03, Ekrot  3.82161e+00 Det(I) =  3.43618e+07
+  COM:      3.11731       3.06420       1.47125
+  P:        0.00021      -0.00013      -0.00008
+  V:        0.00000      -0.00000      -0.00000
+  J:      -40.26974      -0.00027     -60.63539
+  w:       -0.04388      -0.01316      -0.09691
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.98673e+02,  1.38164e+01, -3.10493e+01}
+   Inertia tensor[    1]={ 1.38164e+01,  4.23694e+02,  7.90654e+01}
+   Inertia tensor[    2]={-3.10493e+01,  7.90654e+01,  4.29598e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.00630e+02    4.63171e+02    3.32862e+01    1.81409e+02   -3.82014e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.30667e+02   -9.75050e+02   -3.74736e+03    5.47225e+02   -3.20013e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.94074e+04    2.82472e+02   -8.55000e+01    2.36934e-04
+
+Group rest with mass  1.56797e+03, Ekrot  9.01339e+00 Det(I) =  4.61241e+07
+  COM:      3.11731       3.00072       1.47125
+  P:        0.00023      -0.00006      -0.00008
+  V:        0.00000      -0.00000      -0.00000
+  J:       91.31949       0.00018      90.48034
+  w:        0.08562      -0.00404       0.11282
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.77461e+02, -3.98008e+01, -1.82090e+01}
+   Inertia tensor[    1]={-3.98008e+01,  6.10422e+02,  8.33252e+00}
+   Inertia tensor[    2]={-1.82090e+01,  8.33252e+00,  4.34007e+02}
+Group rest with mass  1.56797e+03, Ekrot  6.82714e+00 Det(I) =  4.20379e+07
+  COM:      3.11731       3.00072       1.47125
+  P:       -0.00005       0.00009      -0.00019
+  V:       -0.00000       0.00000      -0.00000
+  J:       23.68995       0.00052    -100.00127
+  w:        0.02711      -0.00805      -0.13012
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.72275e+02, -3.58555e+01, -2.78667e+01}
+   Inertia tensor[    1]={-3.58555e+01,  6.03847e+02,  2.88452e+01}
+   Inertia tensor[    2]={-2.78667e+01,  2.88452e+01,  4.14557e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.86564e+00 Det(I) =  4.11179e+07
+  COM:      3.11731       2.99006       1.47125
+  P:        0.00010       0.00000      -0.00006
+  V:        0.00000       0.00000      -0.00000
+  J:      -59.51416      -0.00038       5.45782
+  w:       -0.06187       0.00530       0.00904
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.97388e+02, -3.74990e+01, -2.57559e+01}
+   Inertia tensor[    1]={-3.74990e+01,  6.20127e+02,  6.37080e+01}
+   Inertia tensor[    2]={-2.57559e+01,  6.37080e+01,  3.48823e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.58935e+00 Det(I) =  4.87657e+07
+  COM:      3.11731       2.99006       1.47125
+  P:       -0.00010       0.00002      -0.00009
+  V:       -0.00000       0.00000      -0.00000
+  J:      -55.34265       0.00017      -7.69300
+  w:       -0.05640      -0.00046      -0.00744
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.23789e+02, -3.39941e+00, -2.66538e+01}
+   Inertia tensor[    1]={-3.39941e+00,  6.12497e+02,  6.19341e+01}
+   Inertia tensor[    2]={-2.66538e+01,  6.19341e+01,  3.65158e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.92706e+00 Det(I) =  2.04191e+07
+  COM:      3.11731       3.10659       1.47125
+  P:        0.00003      -0.00020       0.00011
+  V:        0.00000      -0.00000       0.00000
+  J:       28.06784       0.00013      49.49163
+  w:        0.03791      -0.00199       0.09679
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.42778e+02, -7.58057e+01, -4.49736e+01}
+   Inertia tensor[    1]={-7.58057e+01,  2.50604e+02,  1.69111e+01}
+   Inertia tensor[    2]={-4.49736e+01,  1.69111e+01,  3.78985e+02}
+           Step           Time
+         295000     1180.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.33088e+02    4.71618e+02    3.09640e+01    2.12610e+02   -3.85048e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.08966e+02   -9.79464e+02   -3.69063e+03    5.51497e+02   -3.13913e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.99238e+04    2.84678e+02    3.44037e+02    1.57203e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.82955e+00 Det(I) =  3.34996e+07
+  COM:      3.11731       3.06420       1.47125
+  P:       -0.00010       0.00005      -0.00005
+  V:       -0.00000       0.00000      -0.00000
+  J:      -40.54824       0.00001      27.53154
+  w:       -0.05537       0.01005       0.05136
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.27992e+02, -6.18672e+01, -7.16060e+01}
+   Inertia tensor[    1]={-6.18672e+01,  3.96711e+02,  5.87437e+01}
+   Inertia tensor[    2]={-7.16060e+01,  5.87437e+01,  4.13302e+02}
+Group rest with mass  1.56797e+03, Ekrot  3.17527e+00 Det(I) =  4.42450e+07
+  COM:      3.11731       2.99006       1.47125
+  P:        0.00011       0.00005       0.00004
+  V:        0.00000       0.00000       0.00000
+  J:       40.53876      -0.00002     -59.01679
+  w:        0.04431       0.00229      -0.07717
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.89632e+02, -1.96777e+01, -5.62666e+01}
+   Inertia tensor[    1]={-1.96777e+01,  6.08312e+02, -2.88906e+01}
+   Inertia tensor[    2]={-5.62666e+01, -2.88906e+01,  4.03530e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.08608e+00 Det(I) =  4.49876e+07
+  COM:      3.11731       2.99006       1.47125
+  P:        0.00011      -0.00011      -0.00000
+  V:        0.00000      -0.00000      -0.00000
+  J:       -5.58819       0.00060     -58.12490
+  w:       -0.00019       0.00313      -0.07176
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.05290e+02, -1.92246e+01, -7.60649e+01}
+   Inertia tensor[    1]={-1.92246e+01,  6.05621e+02, -2.60186e+01}
+   Inertia tensor[    2]={-7.60649e+01, -2.60186e+01,  3.92928e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.09615e+00 Det(I) =  4.17152e+07
+  COM:      3.11731       3.00072       1.47125
+  P:        0.00002       0.00006       0.00014
+  V:        0.00000       0.00000       0.00000
+  J:       14.27794       0.00021      40.64032
+  w:        0.01104      -0.00040       0.05007
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.06327e+02,  3.41406e+00, -7.37324e+01}
+   Inertia tensor[    1]={ 3.41406e+00,  5.89205e+02, -5.39502e+00}
+   Inertia tensor[    2]={-7.37324e+01, -5.39502e+00,  3.69552e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.62030e+00 Det(I) =  4.65572e+07
+  COM:      3.11731       2.99006       1.47125
+  P:        0.00023       0.00009       0.00021
+  V:        0.00000       0.00000       0.00000
+  J:       35.65147       0.00007     -54.34588
+  w:        0.03993       0.00230      -0.07024
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.03330e+02, -1.87275e+01, -6.79990e+01}
+   Inertia tensor[    1]={-1.87275e+01,  6.10073e+02, -3.04238e+01}
+   Inertia tensor[    2]={-6.79990e+01, -3.04238e+01,  4.01338e+02}
+           Step           Time
+         300000     1200.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.56383e+02    4.53183e+02    3.21643e+01    2.11722e+02   -3.75108e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.61544e+02   -9.58880e+02   -3.71806e+03    5.87543e+02   -3.13051e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.03765e+04    3.03284e+02   -2.64394e+01    2.10760e-04
+
+Group rest with mass  1.56797e+03, Ekrot  2.24692e+00 Det(I) =  5.05095e+07
+  COM:      3.11731       3.00072       1.47125
+  P:       -0.00010       0.00014       0.00002
+  V:       -0.00000       0.00000       0.00000
+  J:      -63.43654       0.00005       9.17287
+  w:       -0.06864       0.00044       0.01524
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.42272e+02, -4.43652e+00, -4.04062e+01}
+   Inertia tensor[    1]={-4.43652e+00,  5.41289e+02, -1.81543e+00}
+   Inertia tensor[    2]={-4.04062e+01, -1.81543e+00,  3.91968e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.39902e+00 Det(I) =  5.19117e+07
+  COM:      3.11731       2.99006       1.47125
+  P:       -0.00005       0.00011      -0.00011
+  V:       -0.00000       0.00000      -0.00000
+  J:       47.11330      -0.00015     -18.62540
+  w:        0.04892      -0.00049      -0.02647
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.24040e+02, -8.27148e+00, -5.35884e+01}
+   Inertia tensor[    1]={-8.27148e+00,  5.78434e+02, -3.43115e+00}
+   Inertia tensor[    2]={-5.35884e+01, -3.43115e+00,  4.13657e+02}
+           Step           Time
+         305000     1220.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.04960e+02    4.56203e+02    3.05246e+01    1.95580e+02   -3.75738e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.30945e+02   -9.83699e+02   -3.68476e+03    5.95541e+02   -3.08922e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.08392e+04    3.07413e+02    7.99591e+01    1.96285e-04
+
+           Step           Time
+         310000     1240.00000
+
+Group rest with mass  1.56797e+03, Ekrot  1.07749e+00 Det(I) =  2.75985e+07
+  COM:      3.11731       3.08526       1.47125
+  P:        0.00017      -0.00002       0.00017
+  V:        0.00000      -0.00000       0.00000
+  J:       10.07085       0.00029     -34.18066
+  w:        0.01728      -0.00886      -0.05795
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.73966e+02, -6.20996e+01, -1.52090e+01}
+   Inertia tensor[    1]={-6.20996e+01,  3.31739e+02,  7.44512e+01}
+   Inertia tensor[    2]={-1.52090e+01,  7.44512e+01,  3.33833e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.91163e+02    4.59092e+02    2.72360e+01    1.91222e+02   -3.74479e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.45127e+02   -1.01621e+03   -3.73742e+03    5.68323e+02   -3.16910e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.12664e+04    2.93363e+02    1.45481e+01    1.85270e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.09684e+00 Det(I) =  2.42708e+07
+  COM:      3.10665       3.10659       1.47125
+  P:       -0.00016      -0.00025      -0.00002
+  V:       -0.00000      -0.00000      -0.00000
+  J:       -0.00032      -4.01298      35.13034
+  w:       -0.00932       0.00317       0.06281
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.33195e+02, -1.25711e+02, -9.02515e+01}
+   Inertia tensor[    1]={-1.25711e+02,  2.43710e+02,  8.26406e+01}
+   Inertia tensor[    2]={-9.02515e+01,  8.26406e+01,  4.07588e+02}
+           Step           Time
+         315000     1260.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.85695e+02    4.84765e+02    5.40202e+01    1.92349e+02   -3.79464e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.56966e+02   -9.12197e+02   -3.64698e+03    5.78996e+02   -3.06798e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.17458e+04    2.98872e+02    1.90212e+02    1.49373e-04
+
+           Step           Time
+         320000     1280.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.99032e+02    4.81910e+02    4.34974e+01    1.67461e+02   -3.76571e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.43130e+02   -1.02015e+03   -3.73709e+03    5.51993e+02   -3.18509e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.21837e+04    2.84934e+02   -2.49252e+01    2.25413e-04
+
+           Step           Time
+         325000     1300.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.83363e+02    5.04469e+02    3.00330e+01    1.88249e+02   -3.79579e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.47507e+02   -1.00347e+03   -3.74065e+03    5.65330e+02   -3.17532e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.26400e+04    2.91818e+02   -1.32263e+02    2.14724e-04
+
+           Step           Time
+         330000     1320.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.84954e+02    5.01554e+02    3.86776e+01    1.89925e+02   -3.78615e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.49172e+02   -9.80237e+02   -3.70045e+03    5.60668e+02   -3.13978e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.31135e+04    2.89411e+02    3.00187e+02    1.65036e-04
+
+           Step           Time
+         335000     1340.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.57008e+02    4.97794e+02    5.27829e+01    1.99575e+02   -3.79492e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.52764e+02   -1.02368e+03   -3.76419e+03    5.93166e+02   -3.17103e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.35573e+04    3.06187e+02    1.96967e+00    1.94753e-04
+
+           Step           Time
+         340000     1360.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.55727e+02    5.03949e+02    3.63306e+01    1.93783e+02   -3.75047e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.26650e+02   -1.07802e+03   -3.76534e+03    5.33007e+02   -3.23233e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.39752e+04    2.75133e+02    4.17673e+00    2.32533e-04
+
+           Step           Time
+         345000     1380.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.39115e+02    4.75797e+02    3.93774e+01    1.92115e+02   -3.80897e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.97989e+02   -9.52192e+02   -3.81275e+03    5.67299e+02   -3.24545e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.44692e+04    2.92834e+02   -7.57116e+01    2.20760e-04
+
+           Step           Time
+         350000     1400.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.85908e+02    4.75712e+02    3.46012e+01    1.95190e+02   -3.66126e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.67132e+02   -1.10554e+03   -3.74252e+03    6.26443e+02   -3.11608e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.49695e+04    3.23364e+02    1.22837e+02    1.98424e-04
+
+           Step           Time
+         355000     1420.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.93845e+02    4.91559e+02    3.14078e+01    1.77143e+02   -3.80668e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.64800e+02   -9.58022e+02   -3.73555e+03    6.15757e+02   -3.11979e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.54240e+04    3.17848e+02    1.91270e+02    2.04115e-04
+
+           Step           Time
+         360000     1440.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.92178e+02    4.98850e+02    2.83864e+01    1.95391e+02   -3.73791e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.55514e+02   -9.78999e+02   -3.65761e+03    6.22997e+02   -3.03462e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.58784e+04    3.21585e+02   -1.20752e+02    2.24009e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.17314e+00 Det(I) =  2.03532e+07
+  COM:      3.10665       3.10659       1.47125
+  P:       -0.00011       0.00010      -0.00003
+  V:       -0.00000       0.00000      -0.00000
+  J:       -0.00025      16.38508     -34.20336
+  w:       -0.00062       0.01984      -0.05909
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.15851e+02, -5.64033e+01, -1.32202e+01}
+   Inertia tensor[    1]={-5.64033e+01,  2.39172e+02,  7.04116e+01}
+   Inertia tensor[    2]={-1.32202e+01,  7.04116e+01,  3.02039e+02}
+           Step           Time
+         365000     1460.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.22282e+02    4.76644e+02    2.37019e+01    1.92757e+02   -3.70805e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.38527e+02   -1.03145e+03   -3.76264e+03    5.95365e+02   -3.16727e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.63265e+04    3.07322e+02    3.18296e+01    1.77843e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.72313e+00 Det(I) =  2.18163e+07
+  COM:      3.09598       3.10659       1.47125
+  P:       -0.00006      -0.00004       0.00012
+  V:       -0.00000      -0.00000       0.00000
+  J:       -0.00011       4.79604     -45.19852
+  w:        0.00744      -0.00486      -0.07676
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.76307e+02, -6.70107e+01, -4.84375e+01}
+   Inertia tensor[    1]={-6.70107e+01,  2.23530e+02,  1.00048e+02}
+   Inertia tensor[    2]={-4.84375e+01,  1.00048e+02,  3.19721e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.29155e+00 Det(I) =  1.94866e+07
+  COM:      3.11731       3.10659       1.47125
+  P:       -0.00011       0.00005       0.00020
+  V:       -0.00000       0.00000       0.00000
+  J:       -0.00032       4.43030      47.00298
+  w:       -0.01162       0.02243       0.09539
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.04200e+02, -4.72256e+01, -5.87539e+01}
+   Inertia tensor[    1]={-4.72256e+01,  2.19804e+02,  1.02563e+02}
+   Inertia tensor[    2]={-5.87539e+01,  1.02563e+02,  3.53933e+02}
+           Step           Time
+         370000     1480.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.10604e+02    5.11487e+02    3.63132e+01    1.80387e+02   -3.85620e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.53463e+02   -9.54628e+02   -3.72550e+03    5.70111e+02   -3.15539e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.67764e+04    2.94286e+02   -1.13865e+02    2.21417e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.24427e+00 Det(I) =  2.86379e+07
+  COM:      3.07493       3.10659       1.47125
+  P:       -0.00002       0.00009       0.00003
+  V:       -0.00000       0.00000       0.00000
+  J:       -0.00034      42.38792     -13.67962
+  w:       -0.00288       0.05476      -0.01222
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 4.09572e+02, -3.88955e+01, -3.71865e+01}
+   Inertia tensor[    1]={-3.88955e+01,  2.38487e+02,  1.03172e+02}
+   Inertia tensor[    2]={-3.71865e+01,  1.03172e+02,  3.43461e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.47298e+00 Det(I) =  2.54120e+07
+  COM:      3.07493       3.10659       1.47125
+  P:       -0.00011      -0.00023       0.00004
+  V:       -0.00000      -0.00000       0.00000
+  J:        0.00006      44.08839     -24.35778
+  w:       -0.00019       0.05107      -0.02851
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 4.23104e+02, -4.53418e+01, -7.73125e+01}
+   Inertia tensor[    1]={-4.53418e+01,  2.09904e+02,  1.23294e+02}
+   Inertia tensor[    2]={-7.73125e+01,  1.23294e+02,  3.71550e+02}
+           Step           Time
+         375000     1500.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.54155e+02    4.60442e+02    3.44153e+01    1.68765e+02   -3.84935e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.87512e+02   -8.53405e+02   -3.77249e+03    5.96030e+02   -3.17646e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.72284e+04    3.07665e+02   -9.81418e+01    2.10094e-04
+
+           Step           Time
+         380000     1520.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.52526e+02    4.52557e+02    3.32863e+01    2.03549e+02   -3.74788e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.42400e+02   -1.05002e+03   -3.79839e+03    5.58720e+02   -3.23967e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.76723e+04    2.88406e+02    1.69999e+02    1.80566e-04
+
+Writing checkpoint, step 380650 at Thu Mar 30 13:35:14 2023
+
+
+Group rest with mass  1.56797e+03, Ekrot  1.28472e+00 Det(I) =  2.55520e+07
+  COM:      3.07493       3.10659       1.47125
+  P:       -0.00011      -0.00020       0.00019
+  V:       -0.00000      -0.00000       0.00000
+  J:        0.00032      14.55934      35.01036
+  w:       -0.00935       0.02793       0.06178
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 4.09103e+02, -4.68359e+01, -6.45840e+01}
+   Inertia tensor[    1]={-4.68359e+01,  2.13461e+02,  1.01892e+02}
+   Inertia tensor[    2]={-6.45840e+01,  1.01892e+02,  3.53247e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.19263e+00 Det(I) =  2.91805e+07
+  COM:      3.07493       3.10659       1.47125
+  P:       -0.00020      -0.00002       0.00003
+  V:       -0.00000      -0.00000       0.00000
+  J:        0.00021     -25.20177     -27.50762
+  w:        0.00929      -0.03998      -0.05008
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 4.11483e+02, -5.79160e+01, -6.49292e+01}
+   Inertia tensor[    1]={-5.79160e+01,  2.34459e+02,  1.06018e+02}
+   Inertia tensor[    2]={-6.49292e+01,  1.06018e+02,  3.65076e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.30461e+00 Det(I) =  2.78387e+07
+  COM:      3.07493       3.10659       1.47125
+  P:       -0.00035       0.00009       0.00024
+  V:       -0.00000       0.00000       0.00000
+  J:       -0.00006     -40.23620      44.44946
+  w:       -0.00081      -0.04556       0.06246
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.91093e+02, -6.61504e+01, -5.59453e+01}
+   Inertia tensor[    1]={-6.61504e+01,  2.45823e+02,  1.03492e+02}
+   Inertia tensor[    2]={-5.59453e+01,  1.03492e+02,  3.49059e+02}
+Group rest with mass  1.56797e+03, Ekrot  6.16550e+00 Det(I) =  3.85484e+07
+  COM:      3.07493       3.08526       1.47125
+  P:        0.00001       0.00008       0.00000
+  V:        0.00000       0.00000       0.00000
+  J:       -8.96993      73.65596     -67.77514
+  w:       -0.01399       0.08790      -0.08456
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.77220e+02, -1.42676e+01, -9.19189e+00}
+   Inertia tensor[    1]={-1.42676e+01,  3.13479e+02,  1.05128e+02}
+   Inertia tensor[    2]={-9.19189e+00,  1.05128e+02,  3.61859e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.32933e+00 Det(I) =  3.28384e+07
+  COM:      3.09599       3.08526       1.47125
+  P:        0.00009      -0.00016      -0.00022
+  V:        0.00000      -0.00000      -0.00000
+  J:       27.99953     -38.32160     -21.19285
+  w:        0.04396      -0.06471      -0.04472
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.09472e+02, -2.45918e+01, -1.08877e+01}
+   Inertia tensor[    1]={-2.45918e+01,  3.17013e+02,  9.80659e+01}
+   Inertia tensor[    2]={-1.08877e+01,  9.80659e+01,  3.67170e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.06167e+00 Det(I) =  3.88669e+07
+  COM:      3.07493       3.08526       1.47125
+  P:       -0.00003      -0.00005       0.00003
+  V:       -0.00000      -0.00000       0.00000
+  J:      -19.03730      28.35832      10.70089
+  w:       -0.03063       0.04487       0.02501
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.70582e+02, -3.84746e+01, -3.56313e+01}
+   Inertia tensor[    1]={-3.84746e+01,  3.43795e+02,  1.35393e+02}
+   Inertia tensor[    2]={-3.56313e+01,  1.35393e+02,  3.63119e+02}
+           Step           Time
+         385000     1540.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.35331e+02    5.04802e+02    3.59902e+01    1.89735e+02   -3.78621e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.68687e+02   -9.38024e+02   -3.72706e+03    6.24583e+02   -3.10248e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.81568e+04    3.22404e+02   -7.11466e+01    2.04562e-04
+
+Group rest with mass  1.56797e+03, Ekrot  2.00666e+00 Det(I) =  2.03895e+07
+  COM:      3.09599       3.10659       1.47125
+  P:        0.00007      -0.00006       0.00012
+  V:        0.00000      -0.00000       0.00000
+  J:       -0.00005      38.94785      24.61611
+  w:       -0.01394       0.06665       0.05759
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.73054e+02, -6.74199e+01, -5.82070e+01}
+   Inertia tensor[    1]={-6.74199e+01,  2.22459e+02,  1.33035e+02}
+   Inertia tensor[    2]={-5.82070e+01,  1.33035e+02,  3.40390e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.31555e+00 Det(I) =  3.18184e+07
+  COM:      3.09599       3.08526       1.47125
+  P:        0.00002       0.00006       0.00010
+  V:        0.00000       0.00000       0.00000
+  J:       -3.24760     -33.50330      28.14194
+  w:       -0.00297      -0.04773       0.03633
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.09121e+02, -3.98984e+01, -1.78696e+01}
+   Inertia tensor[    1]={-3.98984e+01,  3.49330e+02,  8.95352e+01}
+   Inertia tensor[    2]={-1.78696e+01,  8.95352e+01,  3.22204e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.00760e+00 Det(I) =  3.27332e+07
+  COM:      3.11731       3.05354       1.47125
+  P:       -0.00039      -0.00000      -0.00007
+  V:       -0.00000      -0.00000      -0.00000
+  J:       -8.77511       1.93923     -35.88105
+  w:       -0.01004      -0.00634      -0.05405
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.31871e+02, -4.04131e+01, -9.96338e+00}
+   Inertia tensor[    1]={-4.04131e+01,  4.43222e+02,  1.11817e+02}
+   Inertia tensor[    2]={-9.96338e+00,  1.11817e+02,  3.51861e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.02663e+00 Det(I) =  2.79931e+07
+  COM:      3.11731       3.06421       1.47125
+  P:        0.00013       0.00008      -0.00014
+  V:        0.00000       0.00000      -0.00000
+  J:      -22.04889      -0.00010      44.72775
+  w:       -0.02931       0.01175       0.07617
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.96320e+02, -3.49580e+01, -3.79297e+00}
+   Inertia tensor[    1]={-3.49580e+01,  4.03783e+02,  7.42461e+01}
+   Inertia tensor[    2]={-3.79297e+00,  7.42461e+01,  3.72350e+02}
+Group rest with mass  1.56797e+03, Ekrot  5.58342e+00 Det(I) =  2.65749e+07
+  COM:      3.11731       3.05354       1.47125
+  P:        0.00000       0.00002       0.00008
+  V:        0.00000       0.00000       0.00000
+  J:       93.49677      -0.00012       5.07634
+  w:        0.11877      -0.00869       0.01225
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.80854e+02, -4.76719e+01,  2.21509e+01}
+   Inertia tensor[    1]={-4.76719e+01,  4.06138e+02,  5.92939e+01}
+   Inertia tensor[    2]={ 2.21509e+01,  5.92939e+01,  3.86844e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.74073e+00 Det(I) =  3.30696e+07
+  COM:      3.11731       3.02178       1.47125
+  P:       -0.00001       0.00006       0.00001
+  V:       -0.00000       0.00000       0.00000
+  J:      -62.40678       0.00035     -30.77238
+  w:       -0.06581      -0.00089      -0.04467
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.59553e+02, -5.26719e+01,  1.59912e+01}
+   Inertia tensor[    1]={-5.26719e+01,  5.54596e+02,  8.87930e+01}
+   Inertia tensor[    2]={ 1.59912e+01,  8.87930e+01,  4.03894e+02}
+Group rest with mass  1.56797e+03, Ekrot  2.88386e+00 Det(I) =  2.94391e+07
+  COM:      3.11731       3.01112       1.47125
+  P:       -0.00006       0.00003      -0.00017
+  V:       -0.00000       0.00000      -0.00000
+  J:      -71.15317      -0.00021     -18.76842
+  w:       -0.07397       0.00170      -0.02686
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.44800e+02, -4.67520e+01,  2.06123e+01}
+   Inertia tensor[    1]={-4.67520e+01,  6.04540e+02,  9.64194e+01}
+   Inertia tensor[    2]={ 2.06123e+01,  9.64194e+01,  3.65875e+02}
+           Step           Time
+         390000     1560.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.43723e+02    4.80270e+02    3.15679e+01    2.16752e+02   -3.64934e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.46587e+02   -1.10851e+03   -3.73213e+03    6.08793e+02   -3.12334e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.85763e+04    3.14253e+02    2.57131e+02    1.56802e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.40438e+00 Det(I) =  1.83309e+07
+  COM:      3.11731       3.10659       1.47125
+  P:       -0.00009       0.00012      -0.00006
+  V:       -0.00000       0.00000      -0.00000
+  J:       24.41732       0.00019     -31.21378
+  w:        0.03014      -0.00612      -0.06640
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.69017e+02,  4.16064e+01,  4.42769e+01}
+   Inertia tensor[    1]={ 4.16064e+01,  2.87653e+02,  7.28472e+01}
+   Inertia tensor[    2]={ 4.42769e+01,  7.28472e+01,  4.16390e+02}
+           Step           Time
+         395000     1580.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.37449e+02    4.59606e+02    2.97030e+01    2.03519e+02   -3.79336e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.62386e+02   -9.47104e+02   -3.77257e+03    5.52085e+02   -3.22049e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.89889e+04    2.84981e+02    1.29396e+02    1.60896e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.13171e+00 Det(I) =  2.85814e+07
+  COM:      3.11731       3.06421       1.47125
+  P:        0.00009       0.00012      -0.00017
+  V:        0.00000       0.00000      -0.00000
+  J:       -3.67089       0.00020     -35.87668
+  w:       -0.00711      -0.00439      -0.06236
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.65694e+02, -2.85254e+00,  3.75093e+01}
+   Inertia tensor[    1]={-2.85254e+00,  4.16843e+02,  4.20435e+01}
+   Inertia tensor[    2]={ 3.75093e+01,  4.20435e+01,  4.26724e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.64040e+00 Det(I) =  2.60272e+07
+  COM:      3.11731       3.06421       1.47125
+  P:        0.00018      -0.00015       0.00020
+  V:        0.00000      -0.00000       0.00000
+  J:      -18.83296       0.00023      40.91723
+  w:       -0.01936       0.00474       0.07127
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.55322e+02, -1.96436e+01,  3.89072e+01}
+   Inertia tensor[    1]={-1.96436e+01,  4.10412e+02,  3.31577e+01}
+   Inertia tensor[    2]={ 3.89072e+01,  3.31577e+01,  4.24082e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.82205e+00 Det(I) =  2.72412e+07
+  COM:      3.11731       3.06421       1.47125
+  P:       -0.00004       0.00010      -0.00003
+  V:       -0.00000       0.00000      -0.00000
+  J:       41.04360       0.00058      28.86731
+  w:        0.05006       0.00181       0.05506
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.51773e+02, -1.63867e+00,  3.38037e+01}
+   Inertia tensor[    1]={-1.63867e+00,  4.03960e+02,  2.13110e+01}
+   Inertia tensor[    2]={ 3.38037e+01,  2.13110e+01,  4.53028e+02}
+           Step           Time
+         400000     1600.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.20768e+02    4.99042e+02    2.11934e+01    1.90410e+02   -3.79000e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.66818e+02   -9.98203e+02   -3.82360e+03    6.17830e+02   -3.20577e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.94371e+04    3.18918e+02   -7.13313e+01    2.19096e-04
+
+           Step           Time
+         405000     1620.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.57698e+02    4.66072e+02    2.82743e+01    2.01065e+02   -3.76393e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.32823e+02   -9.88813e+02   -3.73246e+03    5.09439e+02   -3.22302e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -3.98908e+04    2.62967e+02    2.48088e+02    1.50780e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.17900e+00 Det(I) =  2.01952e+07
+  COM:      3.11731       3.09593       1.47125
+  P:       -0.00014      -0.00008      -0.00007
+  V:       -0.00000      -0.00000      -0.00000
+  J:      -17.00012      -0.00025      31.64913
+  w:       -0.01964       0.00432       0.06395
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.50834e+02,  5.86035e+00,  3.57617e+01}
+   Inertia tensor[    1]={ 5.86035e+00,  3.35755e+02,  3.98145e+01}
+   Inertia tensor[    2]={ 3.57617e+01,  3.98145e+01,  4.11924e+02}
+           Step           Time
+         410000     1640.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.12353e+02    4.84855e+02    3.19257e+01    1.85991e+02   -3.76760e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.47840e+02   -1.01629e+03   -3.71661e+03    6.18389e+02   -3.09822e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.03330e+04    3.19206e+02   -1.38907e+02    2.17241e-04
+
+           Step           Time
+         415000     1660.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.92638e+02    4.45257e+02    2.76565e+01    2.15694e+02   -3.75614e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.33302e+02   -1.00673e+03   -3.71493e+03    5.14729e+02   -3.20020e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.07800e+04    2.65698e+02    2.56656e+01    1.94826e-04
+
+           Step           Time
+         420000     1680.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.52688e+02    4.79467e+02    2.75385e+01    1.78708e+02   -3.75289e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.71951e+02   -9.80772e+02   -3.76721e+03    6.05159e+02   -3.16205e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.12387e+04    3.12377e+02   -1.40785e+02    2.31477e-04
+
+           Step           Time
+         425000     1700.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.86021e+02    4.70400e+02    2.57694e+01    1.84476e+02   -3.78357e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.66628e+02   -9.78703e+02   -3.76224e+03    5.61052e+02   -3.20119e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.16540e+04    2.89610e+02    2.84962e+01    2.10171e-04
+
+           Step           Time
+         430000     1720.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.42898e+02    4.75007e+02    3.09330e+01    1.89849e+02   -3.80392e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.46858e+02   -9.46874e+02   -3.75896e+03    5.74488e+02   -3.18447e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.20679e+04    2.96545e+02    6.02641e+01    1.81925e-04
+
+           Step           Time
+         435000     1740.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.53659e+02    5.01286e+02    3.21457e+01    2.00109e+02   -3.81179e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.57982e+02   -9.68096e+02   -3.75067e+03    6.00592e+02   -3.15008e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.25058e+04    3.10020e+02    1.66766e+02    2.11206e-04
+
+           Step           Time
+         440000     1760.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.56179e+02    4.68311e+02    3.04303e+01    2.03370e+02   -3.73335e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.44720e+02   -1.02705e+03   -3.74683e+03    5.23739e+02   -3.22309e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.29104e+04    2.70349e+02    1.94514e+01    1.98923e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.38164e+00 Det(I) =  2.49565e+07
+  COM:      3.11731       3.08527       1.47125
+  P:       -0.00020      -0.00006      -0.00015
+  V:       -0.00000      -0.00000      -0.00000
+  J:      -34.23171       0.00011      27.39713
+  w:       -0.04044       0.00270       0.05033
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 1.66502e+02,  3.08467e+01,  3.56914e+01}
+   Inertia tensor[    1]={ 3.08467e+01,  3.52271e+02,  5.76948e+01}
+   Inertia tensor[    2]={ 3.56914e+01,  5.76948e+01,  4.47684e+02}
+           Step           Time
+         445000     1780.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.41467e+02    4.74581e+02    1.76064e+01    2.06063e+02   -3.73490e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.61008e+02   -1.02857e+03   -3.78477e+03    5.74267e+02   -3.21050e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.33638e+04    2.96431e+02    6.84608e+01    2.14255e-04
+
+           Step           Time
+         450000     1800.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    5.25647e+02    4.82658e+02    2.73662e+01    1.86857e+02   -3.78898e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.74885e+02   -9.51526e+02   -3.69287e+03    5.25166e+02   -3.16770e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.38029e+04    2.71086e+02   -1.21100e+02    2.32542e-04
+
+           Step           Time
+         455000     1820.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.69119e+02    4.78353e+02    4.13307e+01    1.99277e+02   -3.75564e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.84005e+02   -9.84882e+02   -3.73645e+03    5.45886e+02   -3.19056e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.42337e+04    2.81781e+02    9.71787e+01    1.95630e-04
+
+           Step           Time
+         460000     1840.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.89971e+02    4.81872e+02    2.62688e+01    1.79888e+02   -3.79434e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.71767e+02   -9.91778e+02   -3.77988e+03    6.13060e+02   -3.16682e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.46695e+04    3.16456e+02   -3.02912e+02    2.65112e-04
+
+           Step           Time
+         465000     1860.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.66370e+02    5.07213e+02    3.71452e+01    2.13180e+02   -3.73844e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.47389e+02   -1.03651e+03   -3.69843e+03    5.95861e+02   -3.10257e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.50940e+04    3.07578e+02    7.34638e+01    1.92190e-04
+
+           Step           Time
+         470000     1880.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.48128e+02    4.68498e+02    3.51531e+01    2.01604e+02   -3.70066e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.52280e+02   -1.08012e+03   -3.77968e+03    5.58260e+02   -3.22142e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.55313e+04    2.88168e+02    6.93975e+01    1.85016e-04
+
+           Step           Time
+         475000     1900.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.74797e+02    4.92102e+02    3.32500e+01    1.91258e+02   -3.79933e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -2.04943e+02   -9.14605e+02   -3.72747e+03    6.02045e+02   -3.12543e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.59566e+04    3.10770e+02   -4.23275e+01    2.13481e-04
+
+           Step           Time
+         480000     1920.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.23874e+02    4.92190e+02    2.86025e+01    2.06996e+02   -3.74247e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.53222e+02   -1.04255e+03   -3.78659e+03    6.11944e+02   -3.17465e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.63841e+04    3.15880e+02   -9.59836e-01    2.06816e-04
+
+           Step           Time
+         485000     1940.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.47225e+02    5.02826e+02    2.93663e+01    1.86851e+02   -3.80656e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.46945e+02   -1.02354e+03   -3.81078e+03    6.25024e+02   -3.18575e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.68667e+04    3.22631e+02   -8.80908e+01    2.29755e-04
+
+           Step           Time
+         490000     1960.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.46840e+02    4.69644e+02    2.29001e+01    1.94871e+02   -3.76624e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.67634e+02   -9.59000e+02   -3.75862e+03    6.35095e+02   -3.12352e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.73090e+04    3.27830e+02   -4.96652e+01    2.19673e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.41530e+00 Det(I) =  3.41797e+07
+  COM:      3.07493       3.10659       1.47126
+  P:        0.00015      -0.00001       0.00005
+  V:        0.00000      -0.00000       0.00000
+  J:       -0.00007       7.48923     -39.93269
+  w:       -0.00523       0.00735      -0.06951
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.33122e+02,  2.30752e+01,  5.35356e+01}
+   Inertia tensor[    1]={ 2.30752e+01,  2.42810e+02,  2.47476e+01}
+   Inertia tensor[    2]={ 5.35356e+01,  2.47476e+01,  4.35810e+02}
+           Step           Time
+         495000     1980.00000
+
+Group rest with mass  1.56797e+03, Ekrot  2.34375e+00 Det(I) =  2.25181e+07
+  COM:      3.10664       3.10659       1.47126
+  P:       -0.00004       0.00018      -0.00022
+  V:       -0.00000       0.00000      -0.00000
+  J:        0.00011      12.34438      45.48232
+  w:        0.00729       0.02390       0.09658
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.22798e+02,  2.52119e+01,  4.39165e+01}
+   Inertia tensor[    1]={ 2.52119e+01,  2.57901e+02,  2.60249e+01}
+   Inertia tensor[    2]={ 4.39165e+01,  2.60249e+01,  4.06672e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.93680e+02    4.97625e+02    2.06709e+01    1.78619e+02   -3.76495e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -2.06866e+02   -9.61332e+02   -3.74256e+03    5.72168e+02   -3.17039e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.77439e+04    2.95348e+02   -3.24251e+02    2.30309e-04
+
+Group rest with mass  1.56797e+03, Ekrot  1.02200e+00 Det(I) =  2.02759e+07
+  COM:      3.10664       3.10659       1.47126
+  P:        0.00021       0.00003      -0.00013
+  V:        0.00000       0.00000      -0.00000
+  J:       -0.00027     -35.18636       0.56218
+  w:       -0.00336      -0.05819      -0.00653
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 2.32345e+02,  3.29023e+01,  2.84468e+01}
+   Inertia tensor[    1]={ 3.29023e+01,  2.44516e+02,  6.15054e+01}
+   Inertia tensor[    2]={ 2.84468e+01,  6.15054e+01,  3.81084e+02}
+Group rest with mass  1.56797e+03, Ekrot  1.10006e+00 Det(I) =  3.28584e+07
+  COM:      3.06426       3.10659       1.47126
+  P:        0.00016      -0.00013       0.00017
+  V:        0.00000      -0.00000       0.00000
+  J:       -0.00030      40.99976      -0.61944
+  w:        0.00177       0.05369       0.00167
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.79747e+02,  2.00273e+01,  8.24121e+00}
+   Inertia tensor[    1]={ 2.00273e+01,  2.27885e+02,  3.01479e+01}
+   Inertia tensor[    2]={ 8.24121e+00,  3.01479e+01,  3.85536e+02}
+           Step           Time
+         500000     2000.00000
+
+Writing checkpoint, step 500000 at Thu Mar 30 13:39:58 2023
+
+
+Group rest with mass  1.56797e+03, Ekrot  2.40389e+00 Det(I) =  2.73297e+07
+  COM:      3.07493       3.10659       1.47126
+  P:        0.00006      -0.00010       0.00003
+  V:        0.00000      -0.00000       0.00000
+  J:       -0.00017     -50.46395     -23.60233
+  w:       -0.00492      -0.07269      -0.04828
+Inertia tensor (3x3):
+   Inertia tensor[    0]={ 3.48245e+02,  2.93896e+01,  1.64297e+01}
+   Inertia tensor[    1]={ 2.93896e+01,  2.15198e+02,  4.83896e+01}
+   Inertia tensor[    2]={ 1.64297e+01,  4.83896e+01,  3.80093e+02}
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.93733e+02    4.78086e+02    2.79626e+01    1.90015e+02   -3.79601e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -2.09943e+02   -9.63792e+02   -3.77995e+03    6.09940e+02   -3.17001e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -4.82153e+04    3.14845e+02   -8.46550e+01    2.44017e-04
+
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 500001 steps using 1001 frames
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    4.69466e+02    4.80255e+02    3.12842e+01    1.94532e+02   -3.76992e+03
+        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.   Total Energy
+   -1.62567e+02   -9.77506e+02   -3.73446e+03    5.77050e+02   -3.15741e+03
+  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -2.60668e+04    2.97868e+02   -2.72397e+00    0.00000e+00
+
+   Total Virial (kJ/mol)
+    1.83031e+02    3.73378e+00   -7.86123e+00
+    3.73388e+00    2.07260e+02   -1.00380e+01
+   -7.86116e+00   -1.00379e+01    1.99165e+02
+
+   Pressure (bar)
+    4.58362e+00   -6.47661e-01    7.91304e+00
+   -6.47727e-01   -7.34323e+00    5.28287e+00
+    7.91299e+00    5.28283e+00   -5.41231e+00
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ Pair Search distance check              98.503382         886.530     0.1
+ NxN RF Elec. + LJ [F]                12537.920504      476440.979    74.5
+ NxN RF Elec. + LJ [V&F]                 25.156536        1358.453     0.2
+ NxN RF Electrostatics [F]              179.340936        5559.569     0.9
+ NxN RF Electrostatics [V&F]              0.374744          13.491     0.0
+ 1,4 nonbonded interactions             300.500601       27045.054     4.2
+ Shift-X                                  4.720236          28.321     0.0
+ Angles                                 209.000418       35112.070     5.5
+ Propers                                295.000590       67555.135    10.6
+ Impropers                               26.500053        5512.011     0.9
+ Virial                                   0.281281           5.063     0.0
+ Stop-CM                                  0.236472           2.365     0.0
+ Calc-Ekin                               47.200472        1274.413     0.2
+ Lincs                                  118.000708        7080.042     1.1
+ Lincs-Mat                             2508.015048       10032.060     1.6
+ Constraint-V                           236.000944        1888.008     0.3
+ Constraint-Vir                           0.236236           5.670     0.0
+-----------------------------------------------------------------------------
+ Total                                                  639799.235   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank, each using 12 OpenMP threads
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1   12      20001      13.742        362.748   1.2
+ Force                  1   12     500001     300.572       7934.296  25.4
+ NB X/F buffer ops.     1   12     980001     205.952       5436.575  17.4
+ Write traj.            1   12       1002       0.227          5.991   0.0
+ Update                 1   12     500001     134.198       3542.472  11.3
+ Constraints            1   12     500003     495.908      13090.652  41.9
+ Rest                                          32.757        864.700   2.8
+-----------------------------------------------------------------------------
+ Total                                       1183.355      31237.434 100.0
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    14200.258     1183.355     1200.0
+                 (ns/day)    (hour/ns)
+Performance:      146.026        0.164
+Finished mdrun on rank 0 Thu Mar 30 13:39:58 2023
+
