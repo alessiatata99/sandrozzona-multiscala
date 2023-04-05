@@ -1,0 +1,118 @@
+# This file was created Wed Apr  5 15:43:33 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.tpr -f /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.xtc -cl sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_2.pdb -cutoff 0.15 -o sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_2.xpm -g sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_2.log -b 150 -e 200 -dist sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/rmsd_distSA_tat4v_2.xvg -wcl 118
+# gmx cluster is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+0.00897564           0
+ 0.0179513           0
+ 0.0269269           0
+ 0.0359026           0
+ 0.0448782           0
+ 0.0538539           0
+ 0.0628295           0
+ 0.0718051           0
+ 0.0807808           0
+ 0.0897564           0
+ 0.0987321           0
+  0.107708           1
+  0.116683           0
+  0.125659           0
+  0.134635           2
+   0.14361           3
+  0.152586          10
+  0.161562          27
+  0.170537          29
+  0.179513          30
+  0.188489          19
+  0.197464          16
+   0.20644          10
+  0.215415          11
+  0.224391          19
+  0.233367          25
+  0.242342          29
+  0.251318          29
+  0.260294          31
+  0.269269          56
+  0.278245          54
+  0.287221          38
+  0.296196          64
+  0.305172          38
+  0.314148          58
+  0.323123          64
+  0.332099          74
+  0.341074          71
+   0.35005          71
+  0.359026          69
+  0.368001          65
+  0.376977          94
+  0.385953          72
+  0.394928          83
+  0.403904          83
+   0.41288          62
+  0.421855          87
+  0.430831          91
+  0.439807          63
+  0.448782         117
+  0.457758          77
+  0.466733         118
+  0.475709         115
+  0.484685         141
+   0.49366         140
+  0.502636         132
+  0.511612         153
+  0.520587         168
+  0.529563         181
+  0.538539         185
+  0.547514         199
+   0.55649         175
+  0.565466         174
+  0.574441         150
+  0.583417         186
+  0.592392         175
+  0.601368         186
+  0.610344         167
+  0.619319         179
+  0.628295         231
+  0.637271         234
+  0.646246         237
+  0.655222         259
+  0.664198         258
+  0.673173         244
+  0.682149         222
+  0.691124         189
+    0.7001         155
+  0.709076         159
+  0.718051         121
+  0.727027         119
+  0.736003          83
+  0.744978          77
+  0.753954          71
+   0.76293          47
+  0.771905          48
+  0.780881          37
+  0.789857          37
+  0.798832          38
+  0.807808          38
+  0.816784          32
+  0.825759          38
+  0.834735          34
+   0.84371          25
+  0.852686          22
+  0.861662          18
+  0.870637          19
+  0.879613          10
+  0.888589           6
+  0.897564           1

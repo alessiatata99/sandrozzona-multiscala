@@ -1,0 +1,118 @@
+# This file was created Wed Apr  5 16:00:40 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.tpr -f /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.xtc -cl sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_4.pdb -cutoff 0.15 -o sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_4.xpm -g sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_4.log -b 500 -e 600 -dist sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/rmsd_distSA_tat4v_4.xvg -wcl 1
+# gmx cluster is part of G R O M A C S:
+#
+# GRowing Old MAkes el Chrono Sweat
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+0.00317807           0
+0.00635615           0
+0.00953422           0
+ 0.0127123           0
+ 0.0158904           0
+ 0.0190684           0
+ 0.0222465           0
+ 0.0254246           0
+ 0.0286027           0
+ 0.0317807           0
+ 0.0349588           0
+ 0.0381369           0
+  0.041315           0
+  0.044493           0
+ 0.0476711           0
+ 0.0508492           0
+ 0.0540272           2
+ 0.0572053           2
+ 0.0603834           5
+ 0.0635615          18
+ 0.0667395          39
+ 0.0699176          41
+ 0.0730957          77
+ 0.0762738         118
+ 0.0794518         158
+ 0.0826299         183
+  0.085808         211
+  0.088986         271
+ 0.0921641         298
+ 0.0953422         338
+ 0.0985203         368
+  0.101698         439
+  0.104876         467
+  0.108054         496
+  0.111233         514
+  0.114411         517
+  0.117589         551
+  0.120767         651
+  0.123945         616
+  0.127123         693
+  0.130301         712
+  0.133479         755
+  0.136657         770
+  0.139835         818
+  0.143013         787
+  0.146191         876
+  0.149369         801
+  0.152548         863
+  0.155726         838
+  0.158904         843
+  0.162082         922
+   0.16526         863
+  0.168438         886
+  0.171616         859
+  0.174794         830
+  0.177972         803
+   0.18115         826
+  0.184328         753
+  0.187506         758
+  0.190684         708
+  0.193862         675
+  0.197041         642
+  0.200219         606
+  0.203397         592
+  0.206575         539
+  0.209753         511
+  0.212931         484
+  0.216109         455
+  0.219287         452
+  0.222465         411
+  0.225643         391
+  0.228821         355
+  0.231999         327
+  0.235177         253
+  0.238355         246
+  0.241534         198
+  0.244712         168
+   0.24789         117
+  0.251068         107
+  0.254246         108
+  0.257424          74
+  0.260602          73
+   0.26378          61
+  0.266958          56
+  0.270136          33
+  0.273314          20
+  0.276492          14
+   0.27967          16
+  0.282849          13
+  0.286027           6
+  0.289205           9
+  0.292383           4
+  0.295561           2
+  0.298739           6
+  0.301917           3
+  0.305095           1
+  0.308273           1
+  0.311451           1
+  0.314629           0
+  0.317807           1

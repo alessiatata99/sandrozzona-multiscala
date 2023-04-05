@@ -1,0 +1,29 @@
+# This file was created Wed Apr  5 16:25:14 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_2.pdb113.pdb -s /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.tpr -num sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/hb_22.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# GRoups of Organic Molecules in ACtion for Science
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+     196.8           6          71
+     197.2           5          80
+     197.6           5          80
+       198           6          75

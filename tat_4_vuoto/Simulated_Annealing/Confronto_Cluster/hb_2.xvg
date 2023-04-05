@@ -1,0 +1,143 @@
+# This file was created Wed Apr  5 16:23:09 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_2.pdb -s /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.tpr -num sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/hb_2.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+     150.4           9          73
+     151.6           3          77
+       152           2          73
+     152.4           5          75
+     152.8           4          85
+     153.2           3          69
+     153.6           4          74
+       154           3          74
+     154.4           7          74
+     154.8           7          71
+     155.2           3          76
+     155.6           4          71
+       156           9          72
+     156.4           6          71
+     156.8           2          73
+     157.2           5          71
+     157.6           2          73
+       158           5          74
+     158.4           5          77
+     158.8           7          78
+     159.2           4          74
+     159.6           6          70
+       160           1          73
+     160.4           3          71
+     160.8           4          76
+     161.2           2          77
+     161.6           4          75
+       162           7          70
+     162.4           6          76
+     162.8           5          73
+     163.2           5          77
+     163.6           4          76
+       164           3          80
+     164.4           9          74
+     164.8           4          78
+     165.2           4          79
+     165.6           8          79
+       166           2          82
+     166.8           7          77
+     167.2           8          70
+     167.6           8          77
+       168           2          77
+     168.4           8          73
+     168.8           6          78
+     169.2           4          74
+     169.6           2          81
+       170           3          78
+     170.4           8          81
+     170.8           3          78
+     171.2           2          80
+     171.6           3          81
+       172           4          74
+     172.4           2          75
+     172.8           8          72
+     173.2           5          75
+     173.6           3          77
+       174           2          76
+     174.4           3          78
+     174.8           6          81
+     175.2           7          73
+     175.6           5          84
+       176           6          72
+     176.4           3          76
+     176.8           5          80
+     177.2           6          74
+     177.6           5          79
+       178           4          74
+     178.4           4          78
+     178.8           8          75
+     179.2           8          76
+     179.6           5          76
+       180           5          81
+     180.4           7          74
+     180.8           6          82
+     181.2           4          81
+     181.6           5          78
+       182           6          76
+     182.4           6          81
+     182.8           4          79
+     183.2           5          77
+     183.6           4          74
+       184           7          76
+     184.4           4          74
+     184.8           2          79
+     185.2           4          78
+     185.6           1          81
+       186           7          75
+     186.4           5          79
+     186.8           4          76
+     187.2           6          75
+     187.6           2          77
+       188           8          70
+     188.4           4          77
+     188.8           4          75
+     189.2           5          78
+     189.6           3          84
+       190           3          74
+     190.4           5          81
+     190.8           6          72
+     191.2           3          80
+     191.6           5          77
+       192           3          75
+     192.4           4          83
+     192.8           2          79
+     193.2           4          77
+     193.6           5          78
+       194           3          79
+     194.4           4          78
+     194.8           7          75
+     195.2           6          72
+       196           5          74
+     196.4           4          79
+     197.6           5          80
+     198.4           3          78
+     198.8           3          80
+     199.2           3          77
+     199.6           5          79
+       200           4          78

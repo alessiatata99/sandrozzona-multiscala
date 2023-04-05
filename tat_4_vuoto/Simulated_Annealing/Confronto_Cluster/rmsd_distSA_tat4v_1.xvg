@@ -1,0 +1,118 @@
+# This file was created Wed Apr  5 14:38:34 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.tpr -f /content/sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/annealing_tat4v.xtc -cl sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/cluster_SA_tat4v1.pdb -cutoff 0.15 -o sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_1.xpm -g sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/clusterSA_tat4v_1.log -b 0 -e 50 -dist sandrozzona-multiscala/tat_4_vuoto/Simulated_Annealing/rmsd_distSA_tat4v_1.xvg -wcl 1
+# gmx cluster is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+0.00211793           0
+0.00423587           0
+ 0.0063538           0
+0.00847173           0
+ 0.0105897           0
+ 0.0127076           0
+ 0.0148255           0
+ 0.0169435           0
+ 0.0190614           0
+ 0.0211793           0
+ 0.0232973           0
+ 0.0254152           0
+ 0.0275331           0
+ 0.0296511           0
+  0.031769           0
+ 0.0338869           0
+ 0.0360049           0
+ 0.0381228           0
+ 0.0402407           0
+ 0.0423587           0
+ 0.0444766           0
+ 0.0465945           0
+ 0.0487125           0
+ 0.0508304           1
+ 0.0529483           2
+ 0.0550663           1
+ 0.0571842           1
+ 0.0593021           3
+ 0.0614201           6
+  0.063538          15
+ 0.0656559          15
+ 0.0677739          18
+ 0.0698918          32
+ 0.0720097          49
+ 0.0741277          53
+ 0.0762456          68
+ 0.0783636          86
+ 0.0804815          90
+ 0.0825994         122
+ 0.0847173         130
+ 0.0868353         145
+ 0.0889532         170
+ 0.0910712         198
+ 0.0931891         212
+  0.095307         199
+  0.097425         229
+ 0.0995429         224
+  0.101661         281
+  0.103779         328
+  0.105897         316
+  0.108015         298
+  0.110133         335
+   0.11225         343
+  0.114368         302
+  0.116486         303
+  0.118604         305
+  0.120722         321
+   0.12284         269
+  0.124958         237
+  0.127076         255
+  0.129194         221
+  0.131312         161
+   0.13343         177
+  0.135548         158
+  0.137666         151
+  0.139784         145
+  0.141902          95
+  0.144019         123
+  0.146137         100
+  0.148255          68
+  0.150373          73
+  0.152491          67
+  0.154609          54
+  0.156727          46
+  0.158845          39
+  0.160963          29
+  0.163081          30
+  0.165199          30
+  0.167317          19
+  0.169435          22
+  0.171553          11
+  0.173671          23
+  0.175789          14
+  0.177906           9
+  0.180024           6
+  0.182142           7
+   0.18426           5
+  0.186378           3
+  0.188496           4
+  0.190614           8
+  0.192732           0
+   0.19485           1
+  0.196968           2
+  0.199086           5
+  0.201204           1
+  0.203322           1
+   0.20544           2
+  0.207558           2
+  0.209675           0
+  0.211793           1
