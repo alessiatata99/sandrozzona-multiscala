@@ -1,0 +1,38 @@
+# This file was created Wed Apr 19 15:40:16 2023
+# Created by:
+#               :-) GROMACS - gmx rmsf, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx rmsf -f MD-prod/MD_pep1_v.xtc -s MD-prod/prod_MD_pep1.tpr -o Analisi/rmsf.xvg -res
+# gmx rmsf is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "RMS fluctuation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+    1   0.2926
+    2   0.3618
+    3   0.2177
+    4   0.1406
+    5   0.1417
+    6   0.2097
+    7   0.2328
+    8   0.2437
+    9   0.1913
+   10   0.1664
+   11   0.1596
+   12   0.1880
+   13   0.1397
+   14   0.0915
+   15   0.0839
+   16   0.0675
+   17   0.1296
+   18   0.1767
+   19   0.1798
+   20   0.1504
+   21   0.1381
