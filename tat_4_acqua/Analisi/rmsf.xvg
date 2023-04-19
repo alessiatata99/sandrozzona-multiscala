@@ -1,0 +1,28 @@
+# This file was created Wed Apr 19 20:23:59 2023
+# Created by:
+#               :-) GROMACS - gmx rmsf, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx rmsf -f /content/sandrozzona-multiscala/tat_4_acqua/MD-Prod/prod_MD_tat4w.xtc -s /content/sandrozzona-multiscala/tat_4_acqua/MD-Prod/prod_MD_tat4w.tpr -o /content/sandrozzona-multiscala/tat_4_acqua/Analisi/rmsf.xvg -res
+# gmx rmsf is part of G R O M A C S:
+#
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+#
+@    title "RMS fluctuation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+   47   0.0411
+   48   0.0418
+   49   0.0299
+   50   0.0287
+   51   0.0369
+   52   0.0277
+   53   0.0249
+   54   0.0270
+   55   0.0273
+   56   0.0289
+   57   0.0345
