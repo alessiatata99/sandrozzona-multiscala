@@ -1,0 +1,20 @@
+Using linkage method for clustering
+Using RMSD cutoff 0.15 nm
+The RMSD ranges from 0.0547882 to 0.20538 nm
+Average RMSD is 0.0983369
+Number of structures for matrix 51
+Energy of the matrix is 0.471073.
+
+Found 1 clusters
+
+Writing middle structure for each cluster to Simulated_Annealing/clusterSA_pep1v_4.pdb
+
+cl. | #st  rmsd | middle rmsd | cluster members
+  1 |  51  0.098 |    550 .080 |    500    502    504    506    508    510    512
+    |           |             |    514    516    518    520    522    524    526
+    |           |             |    528    530    532    534    536    538    540
+    |           |             |    542    544    546    548    550    552    554
+    |           |             |    556    558    560    562    564    566    568
+    |           |             |    570    572    574    576    578    580    582
+    |           |             |    584    586    588    590    592    594    596
+    |           |             |    598    600
