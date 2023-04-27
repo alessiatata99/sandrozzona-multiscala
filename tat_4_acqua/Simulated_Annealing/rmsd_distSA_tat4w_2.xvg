@@ -1,0 +1,118 @@
+# This file was created Thu Apr 27 17:30:40 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/annealing_tat4w.tpr -f /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/annealing_tat4w.xtc -cl sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/clusterSA_tat4w_2.pdb -cutoff 0.15 -o sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/clusterSA_tat4w_2.xpm -g sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/clusterSA_tat4w_2.log -b 150 -e 200 -dist sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/rmsd_distSA_tat4w_2.xvg
+# gmx cluster is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+0.00539936           0
+ 0.0107987           0
+ 0.0161981           0
+ 0.0215974           0
+ 0.0269968           0
+ 0.0323962           0
+ 0.0377955           0
+ 0.0431949           0
+ 0.0485942           0
+ 0.0539936           0
+  0.059393           0
+ 0.0647923           0
+ 0.0701917           0
+  0.075591           0
+ 0.0809904           0
+ 0.0863898           0
+ 0.0917891           0
+ 0.0971885           0
+  0.102588           0
+  0.107987           0
+  0.113387           0
+  0.118786           0
+  0.124185           0
+  0.129585           0
+  0.134984           0
+  0.140383           0
+  0.145783           0
+  0.151182           0
+  0.156581           0
+  0.161981           0
+   0.16738           2
+   0.17278           1
+  0.178179           0
+  0.183578           0
+  0.188978           0
+  0.194377           2
+  0.199776           4
+  0.205176           0
+  0.210575           4
+  0.215974           0
+  0.221374           1
+  0.226773           4
+  0.232172           7
+  0.237572           3
+  0.242971           4
+  0.248371           2
+   0.25377           1
+  0.259169           3
+  0.264569           5
+  0.269968           1
+  0.275367           5
+  0.280767           1
+  0.286166           5
+  0.291565           3
+  0.296965           4
+  0.302364           3
+  0.307763          10
+  0.313163           6
+  0.318562           2
+  0.323962           5
+  0.329361           8
+   0.33476           3
+   0.34016           5
+  0.345559           6
+  0.350958           6
+  0.356358          12
+  0.361757           8
+  0.367156           6
+  0.372556          14
+  0.377955           3
+  0.383355          11
+  0.388754           5
+  0.394153           5
+  0.399553           9
+  0.404952          15
+  0.410351           5
+  0.415751           6
+   0.42115          15
+  0.426549           7
+  0.431949          10
+  0.437348           5
+  0.442747           8
+  0.448147          11
+  0.453546           6
+  0.458946          10
+  0.464345           6
+  0.469744           3
+  0.475144           3
+  0.480543           2
+  0.485942           3
+  0.491342           3
+  0.496741           1
+   0.50214           0
+   0.50754           3
+  0.512939           5
+  0.518339           3
+  0.523738           1
+  0.529137           3
+  0.534537           1
+  0.539936           1

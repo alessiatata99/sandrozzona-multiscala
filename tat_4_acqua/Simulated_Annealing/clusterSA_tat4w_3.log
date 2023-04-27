@@ -1,0 +1,17 @@
+Using linkage method for clustering
+Using RMSD cutoff 0.15 nm
+The RMSD ranges from 0.00382174 to 0.00770631 nm
+Average RMSD is 0.00578002
+Number of structures for matrix 26
+Energy of the matrix is 0.000639382.
+
+Found 1 clusters
+
+Writing middle structure for each cluster to sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/clusterSA_tat4w_3.pdb
+Writing all structures for clusters with more than 1 structures to sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/clusterSA_tat4w_3.pdb%01d.pdb
+
+cl. | #st  rmsd | middle rmsd | cluster members
+  1 |  26  0.006 |    396 .005 |    350    352    354    356    358    360    362
+    |           |             |    364    366    368    370    372    374    376
+    |           |             |    378    380    382    384    386    388    390
+    |           |             |    392    394    396    398    400
