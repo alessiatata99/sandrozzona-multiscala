@@ -39,7 +39,7 @@ energygrps               =
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;, Temperature coupling  
 tcoupl                   = v-rescale
-tc-grps                  = Water 
+tc-grps                  = Protein 
 tau-t                    = 0.1 
 ref-t                    = 500 
 
