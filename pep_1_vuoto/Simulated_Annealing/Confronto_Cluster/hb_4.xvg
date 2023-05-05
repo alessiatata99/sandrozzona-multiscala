@@ -1,0 +1,76 @@
+# This file was created Fri May  5 17:07:13 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f Simulated_Annealing/Confronto_Cluster/clusterSA_pep1v_4.pdb1.pdb -s Simulated_Annealing/annealing_pep1v.tpr -num Simulated_Annealing/Confronto_Cluster/hb_4.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       500          30          98
+       502          29          99
+       504          29         100
+       506          26         104
+       508          23         105
+       510          25         103
+       512          23         108
+       514          25         101
+       516          28         102
+       518          31          99
+       520          27         104
+       522          26         105
+       524          28         103
+       526          24         105
+       528          23         103
+       530          25         108
+       532          27         102
+       534          22         112
+       536          27         103
+       538          29         106
+       540          25         106
+       542          24         107
+       544          23         107
+       546          25         106
+       548          26          98
+       550          27         101
+       552          25         105
+       554          23         101
+       556          24         105
+       558          26         104
+       560          26         107
+       562          27         108
+       564          28         104
+       566          27         101
+       568          26         108
+       570          26         106
+       572          33          94
+       574          23         110
+       576          25         113
+       578          26         102
+       580          22         106
+       582          25         108
+       584          28         102
+       586          24         104
+       588          25         108
+       590          25          99
+       592          23          99
+       594          26         107
+       596          25         102
+       598          24         108
+       600          27         103

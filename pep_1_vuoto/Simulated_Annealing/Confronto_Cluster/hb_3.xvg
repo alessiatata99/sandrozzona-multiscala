@@ -1,0 +1,51 @@
+# This file was created Fri May  5 17:05:36 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f Simulated_Annealing/Confronto_Cluster/clusterSA_pep1v_3.pdb1.pdb -s Simulated_Annealing/annealing_pep1v.tpr -num Simulated_Annealing/Confronto_Cluster/hb_3.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Good gRace! Old Maple Actually Chews Slate
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       350          26          99
+       352          25         102
+       354          25         101
+       356          25         101
+       358          26         100
+       360          25         101
+       362          26         103
+       364          26          99
+       366          25          99
+       368          26         100
+       370          25         103
+       372          26          99
+       374          25         101
+       376          25         103
+       378          26         103
+       380          26         100
+       382          25         103
+       384          25         100
+       386          25         101
+       388          26         100
+       390          25         102
+       392          25         102
+       394          25         102
+       396          25         100
+       398          25         103
+       400          26         102
