@@ -1,0 +1,51 @@
+# This file was created Sun May  7 12:28:38 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_tat4w_3.pdb1.pdb -s /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/annealing_tat4w.tpr -num /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/hb_3.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       350           1          71
+       352           1          70
+       354           1          71
+       356           1          70
+       358           1          70
+       360           1          71
+       362           1          70
+       364           1          71
+       366           1          70
+       368           1          70
+       370           1          71
+       372           1          71
+       374           1          70
+       376           1          70
+       378           1          71
+       380           1          70
+       382           1          71
+       384           1          70
+       386           1          70
+       388           1          71
+       390           1          71
+       392           1          71
+       394           1          70
+       396           1          71
+       398           1          71
+       400           1          71

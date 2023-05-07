@@ -1,0 +1,118 @@
+# This file was created Sun May  7 12:35:59 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/annealing_tat4w.tpr -f /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/annealing_tat4w.xtc -cl /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_tat4w_3.pdb -cutoff 0.15 -o /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_tat4w_3.xpm -g /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_tat4w_3.log -b 350 -e 400 -dist /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/rmsd_distSA_tat4w_3.xvg -wcl 1
+# gmx cluster is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+6.10969e-05           0
+0.000122194           0
+0.000183291           0
+0.000244388           0
+0.000305484           0
+0.000366581           0
+0.000427678           0
+0.000488775           0
+0.000549872           0
+0.000610969           0
+0.000672066           0
+0.000733163           0
+0.00079426           0
+0.000855357           0
+0.000916453           0
+0.00097755           0
+0.00103865           0
+0.00109974           0
+0.00116084           0
+0.00122194           0
+0.00128303           0
+0.00134413           0
+0.00140523           0
+0.00146633           0
+0.00152742           0
+0.00158852           0
+0.00164962           0
+0.00171071           0
+0.00177181           0
+0.00183291           0
+  0.001894           0
+ 0.0019551           0
+ 0.0020162           0
+0.00207729           0
+0.00213839           0
+0.00219949           0
+0.00226059           0
+0.00232168           0
+0.00238278           0
+0.00244388           0
+0.00250497           0
+0.00256607           0
+0.00262717           0
+0.00268826           0
+0.00274936           0
+0.00281046           0
+0.00287155           0
+0.00293265           0
+0.00299375           0
+0.00305484           0
+0.00311594           0
+0.00317704           0
+0.00323814           0
+0.00329923           0
+0.00336033           0
+0.00342143           0
+0.00348252           0
+0.00354362           0
+0.00360472           0
+0.00366581           0
+0.00372691           0
+0.00378801           0
+ 0.0038491           0
+ 0.0039102           0
+ 0.0039713           0
+ 0.0040324           0
+0.00409349           0
+0.00415459           1
+0.00421569           0
+0.00427678           1
+0.00433788           1
+0.00439898           2
+0.00446007           3
+0.00452117           2
+0.00458227           3
+0.00464336          11
+0.00470446          15
+0.00476556          11
+0.00482665          13
+0.00488775          23
+0.00494885          16
+0.00500995          17
+0.00507104          21
+0.00513214          16
+0.00519324          19
+0.00525433          27
+0.00531543          17
+0.00537653          15
+0.00543762          13
+0.00549872          18
+0.00555982           7
+0.00562091           5
+0.00568201           8
+0.00574311          11
+0.00580421           3
+ 0.0058653          12
+ 0.0059264           7
+ 0.0059875           3
+0.00604859           1
+0.00610969           3

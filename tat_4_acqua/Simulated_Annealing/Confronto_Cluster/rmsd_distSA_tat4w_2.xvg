@@ -1,0 +1,118 @@
+# This file was created Sun May  7 12:08:05 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/annealing_tat4w.tpr -f /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/annealing_tat4w.xtc -cl /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_tat4w_2.pdb -cutoff 0.15 -o /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_tat4w_2.xpm -g /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_tat4w_2.log -b 150 -e 200 -dist /content/sandrozzona-multiscala/tat_4_acqua/Simulated_Annealing/Confronto_Cluster/rmsd_distSA_tat4w_2.xvg -wcl 25
+# gmx cluster is part of G R O M A C S:
+#
+# Green Red Orange Magenta Azure Cyan Skyblue
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+0.00645119           0
+ 0.0129024           0
+ 0.0193536           0
+ 0.0258048           0
+  0.032256           0
+ 0.0387071           0
+ 0.0451583           0
+ 0.0516095           0
+ 0.0580607           0
+ 0.0645119           0
+ 0.0709631           0
+ 0.0774143           0
+ 0.0838655           0
+ 0.0903167           0
+ 0.0967679           0
+  0.103219           0
+   0.10967           0
+  0.116121           0
+  0.122573           0
+  0.129024           0
+  0.135475           0
+  0.141926           0
+  0.148377           1
+  0.154829           0
+   0.16128           0
+  0.167731           0
+  0.174182           1
+  0.180633           1
+  0.187085           0
+  0.193536           1
+  0.199987           2
+  0.206438           2
+  0.212889           4
+  0.219341           2
+  0.225792           4
+  0.232243           5
+  0.238694           4
+  0.245145           1
+  0.251596           1
+  0.258048           3
+  0.264499           6
+   0.27095           3
+  0.277401           3
+  0.283852           6
+  0.290304           6
+  0.296755           2
+  0.303206           4
+  0.309657           8
+  0.316108          13
+   0.32256           6
+  0.329011           4
+  0.335462           8
+  0.341913           8
+  0.348364          11
+  0.354816           8
+  0.361267           5
+  0.367718           6
+  0.374169           8
+   0.38062           9
+  0.387071           7
+  0.393523           4
+  0.399974          11
+  0.406425           9
+  0.412876          12
+  0.419327           7
+  0.425779           8
+   0.43223           6
+  0.438681           6
+  0.445132           8
+  0.451583           7
+  0.458035           6
+  0.464486           3
+  0.470937           3
+  0.477388           7
+  0.483839           5
+  0.490291           6
+  0.496742           9
+  0.503193           4
+  0.509644           2
+  0.516095           3
+  0.522546           3
+  0.528998           4
+  0.535449           4
+    0.5419           1
+  0.548351           0
+  0.554802           0
+  0.561254           0
+  0.567705           1
+  0.574156           2
+  0.580607           1
+  0.587058           2
+   0.59351           2
+  0.599961           0
+  0.606412           2
+  0.612863           2
+  0.619314           4
+  0.625766           0
+  0.632217           4
+  0.638668           3
+  0.645119           1
