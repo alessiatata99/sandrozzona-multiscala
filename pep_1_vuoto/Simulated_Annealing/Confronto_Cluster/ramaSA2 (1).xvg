@@ -1,0 +1,72 @@
+# This file was created Sun May  7 19:47:36 2023
+# Created by:
+#               :-) GROMACS - gmx rama, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx rama -f Simulated_Annealing/clusterSA_pep1v_2.pdb01.pdb -s Simulated_Annealing/annealing_pep1v.tpr -o Simulated_Annealing/ramaSA2.xvg
+# gmx rama is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "Ramachandran Plot"
+@    xaxis  label "Phi"
+@    yaxis  label "Psi"
+@TYPE xy
+@    with g0
+@    s0 linestyle 0
+@    s0 color 1
+@ view 0.2, 0.2, 0.8, 0.8
+@ world xmin -180
+@ world ymin -180
+@ world xmax 180
+@ world ymax 180
+@    xaxis  tick on
+@    xaxis  tick major 60
+@    xaxis  tick minor 30
+@    yaxis  tick on
+@    yaxis  tick major 60
+@    yaxis  tick minor 30
+@ s0 symbol 2
+@ s0 symbol size 0.4
+@ s0 symbol fill 1
+-62.5744  -37.1898  GLU-2
+-66.9156  137.326  THR-3
+-85.2587  57.1729  TRP-4
+-116.105  -70.3542  TRP-5
+-86.9563  -31.76  GLU-6
+-111.048  59.3635  THR-7
+-74.5205  19.4177  TRP-8
+-122.148  -11.7434  TRP-9
+-89.2089  -160.591  THR-10
+-64.2013  -49.6264  GLU-11
+-52.9065  -45.5342  TRP-12
+-76.4809  -14.6262  SER-13
+-68.0461  -49.3701  GLN-14
+-54.5196  -41.5005  PRO-15
+-62.1821  5.80336  LYS-16
+-120.784  -31.9425  LYS-17
+-92.248  -72.7003  LYS-18
+-77.8038  175.797  ARG-19
+-110.785  1.81807  LYS-20
+-62.8212  -49.4383  GLU-2
+-66.014  144.663  THR-3
+-87.7534  42.4556  TRP-4
+-109.055  -54.5898  TRP-5
+-100.371  -70.1862  GLU-6
+-88.5806  23.0905  THR-7
+-42.2323  2.22185  TRP-8
+-82.2855  -16.86  TRP-9
+-101.082  -138.008  THR-10
+-72.8736  -37.1533  GLU-11
+-67.4525  -30.8072  TRP-12
+-74.2068  -36.8319  SER-13
+-75.6574  -26.5565  GLN-14
+-78.2986  6.74444  PRO-15
+-91.7406  -48.9889  LYS-16
+-61.3583  -58.9895  LYS-17
+-65.5308  -95.1243  LYS-18
+-57.1298  169.617  ARG-19
+-113.578  -31.6463  LYS-20
