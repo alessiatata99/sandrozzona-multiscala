@@ -41,7 +41,7 @@ energygrps               =
 ;;;;;;;;;;;;;;;;;;;;;;;;;;, Temperature coupling  
 tcoupl                   = v-rescale
 tc-grps                  = Water non-water
-tau-t                    = 3 3
+tau-t                    = 0.5 0.5
 ref-t                    = 300 300
 
 
