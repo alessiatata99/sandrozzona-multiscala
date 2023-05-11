@@ -20,7 +20,7 @@ constraints              = none
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;, part to be updated by users
 
 
-integrator               = steep    ; md          
+integrator               = l-bfgs    ; md          
 dt                       = 0.002
 nsteps                   = 50000         
 
