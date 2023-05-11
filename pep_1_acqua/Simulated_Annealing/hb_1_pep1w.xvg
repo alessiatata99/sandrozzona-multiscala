@@ -1,0 +1,51 @@
+# This file was created Wed May 10 16:57:09 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_1.pdb1.pdb -s /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/annealing_pep1w.tpr -num /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/hb_1_pep1w.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Green Red Orange Magenta Azure Cyan Skyblue
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0          17          91
+         2          16          90
+         4          13          91
+         6          16          88
+         8          17          86
+        10          15          84
+        12          16          89
+        14          13          92
+        16          15          92
+        18          17          94
+        20          15          91
+        22          12          93
+        24          14          94
+        26          13          97
+        28          16          88
+        30          14          90
+        32          15          89
+        34          12          94
+        36          14          90
+        38          14          92
+        40          15          97
+        42          16          91
+        44          14          97
+        46          14          99
+        48          16          95
+        50          12          95

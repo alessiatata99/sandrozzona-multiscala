@@ -1,0 +1,118 @@
+# This file was created Wed May 10 16:40:40 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/annealing_pep1w.tpr -f /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/annealing_pep1w.xtc -cl /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_3.pdb -cutoff 0.15 -o /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_3.xpm -g /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_3.log -b 350 -e 400 -dist /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/rmsd_distSA_pep1w_3.xvg -wcl 1
+# gmx cluster is part of G R O M A C S:
+#
+# GROningen MAchine for Chemical Simulation
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+6.97076e-05           0
+0.000139415           0
+0.000209123           0
+0.000278831           0
+0.000348538           0
+0.000418246           0
+0.000487953           0
+0.000557661           0
+0.000627369           0
+0.000697076           0
+0.000766784           0
+0.000836492           0
+0.000906199           0
+0.000975907           0
+0.00104561           0
+0.00111532           0
+0.00118503           0
+0.00125474           0
+0.00132445           0
+0.00139415           0
+0.00146386           0
+0.00153357           0
+0.00160328           0
+0.00167298           0
+0.00174269           0
+ 0.0018124           0
+0.00188211           0
+0.00195181           0
+0.00202152           0
+0.00209123           0
+0.00216094           0
+0.00223064           0
+0.00230035           0
+0.00237006           0
+0.00243977           0
+0.00250947           0
+0.00257918           0
+0.00264889           0
+ 0.0027186           0
+0.00278831           0
+0.00285801           0
+0.00292772           0
+0.00299743           0
+0.00306714           0
+0.00313684           0
+0.00320655           0
+0.00327626           0
+0.00334597           0
+0.00341567           0
+0.00348538           0
+0.00355509           0
+ 0.0036248           0
+ 0.0036945           0
+0.00376421           0
+0.00383392           0
+0.00390363           0
+0.00397334           0
+0.00404304           0
+0.00411275           0
+0.00418246           0
+0.00425217           0
+0.00432187           0
+0.00439158           0
+0.00446129           0
+  0.004531           0
+ 0.0046007           0
+0.00467041           1
+0.00474012           3
+0.00480983           1
+0.00487953           2
+0.00494924           2
+0.00501895           4
+0.00508866           8
+0.00515836           4
+0.00522807          10
+0.00529778          19
+0.00536749          19
+ 0.0054372          14
+ 0.0055069          21
+0.00557661          19
+0.00564632          23
+0.00571603          23
+0.00578573          10
+0.00585544          17
+0.00592515          15
+0.00599486          17
+0.00606456          12
+0.00613427          10
+0.00620398          11
+0.00627369          11
+0.00634339          11
+ 0.0064131           7
+0.00648281           5
+0.00655252           4
+0.00662223           7
+0.00669193           3
+0.00676164           3
+0.00683135           3
+0.00690106           2
+0.00697076           4

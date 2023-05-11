@@ -1,0 +1,39 @@
+Using linkage method for clustering
+Using RMSD cutoff 0.15 nm
+The RMSD ranges from 0.165447 to 0.552453 nm
+Average RMSD is 0.380533
+Number of structures for matrix 26
+Energy of the matrix is 1.09268.
+
+Found 26 clusters
+
+Writing middle structure for each cluster to /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_2.pdb
+Writing all structures for clusters with more than 1 structures to /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_2.pdb%02d.pdb
+
+cl. | #st  rmsd | middle rmsd | cluster members
+  1 |   1       |    150      |    150
+  2 |   1       |    152      |    152
+  3 |   1       |    154      |    154
+  4 |   1       |    156      |    156
+  5 |   1       |    158      |    158
+  6 |   1       |    160      |    160
+  7 |   1       |    162      |    162
+  8 |   1       |    164      |    164
+  9 |   1       |    166      |    166
+ 10 |   1       |    168      |    168
+ 11 |   1       |    170      |    170
+ 12 |   1       |    172      |    172
+ 13 |   1       |    174      |    174
+ 14 |   1       |    176      |    176
+ 15 |   1       |    178      |    178
+ 16 |   1       |    180      |    180
+ 17 |   1       |    182      |    182
+ 18 |   1       |    184      |    184
+ 19 |   1       |    186      |    186
+ 20 |   1       |    188      |    188
+ 21 |   1       |    190      |    190
+ 22 |   1       |    192      |    192
+ 23 |   1       |    194      |    194
+ 24 |   1       |    196      |    196
+ 25 |   1       |    198      |    198
+ 26 |   1       |    200      |    200

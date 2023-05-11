@@ -1,0 +1,118 @@
+# This file was created Wed May 10 16:19:18 2023
+# Created by:
+#             :-) GROMACS - gmx cluster, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx cluster -s /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/annealing_pep1w.tpr -f /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/annealing_pep1w.xtc -cl /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_1.pdb -cutoff 0.15 -o /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_1.xpm -g /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_1.log -b 0 -e 50 -dist /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/rmsd_distSA_pep1w_1.xvg -wcl 1
+# gmx cluster is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "RMS Distribution"
+@    xaxis  label "RMS (nm)"
+@    yaxis  label "counts"
+@TYPE xy
+         0           0
+0.000866795           0
+0.00173359           0
+0.00260038           0
+0.00346718           0
+0.00433397           0
+0.00520077           0
+0.00606756           0
+0.00693436           0
+0.00780115           0
+0.00866795           0
+0.00953474           0
+ 0.0104015           0
+ 0.0112683           0
+ 0.0121351           0
+ 0.0130019           0
+ 0.0138687           0
+ 0.0147355           0
+ 0.0156023           0
+ 0.0164691           0
+ 0.0173359           0
+ 0.0182027           0
+ 0.0190695           0
+ 0.0199363           0
+ 0.0208031           0
+ 0.0216699           0
+ 0.0225367           0
+ 0.0234035           0
+ 0.0242702           0
+  0.025137           0
+ 0.0260038           0
+ 0.0268706           0
+ 0.0277374           0
+ 0.0286042           0
+  0.029471           0
+ 0.0303378           0
+ 0.0312046           0
+ 0.0320714           0
+ 0.0329382           0
+  0.033805           0
+ 0.0346718           0
+ 0.0355386           0
+ 0.0364054           1
+ 0.0372722           0
+  0.038139           3
+ 0.0390058           0
+ 0.0398726           4
+ 0.0407394           5
+ 0.0416061           3
+ 0.0424729           6
+ 0.0433397           3
+ 0.0442065           6
+ 0.0450733           6
+ 0.0459401           3
+ 0.0468069          10
+ 0.0476737           4
+ 0.0485405          12
+ 0.0494073           8
+ 0.0502741           6
+ 0.0511409           7
+ 0.0520077           7
+ 0.0528745          10
+ 0.0537413          11
+ 0.0546081           9
+ 0.0554749           7
+ 0.0563417           7
+ 0.0572084           8
+ 0.0580752          12
+  0.058942          10
+ 0.0598088          13
+ 0.0606756          13
+ 0.0615424          10
+ 0.0624092          18
+  0.063276          14
+ 0.0641428          11
+ 0.0650096           9
+ 0.0658764           7
+ 0.0667432           6
+   0.06761           9
+ 0.0684768           3
+ 0.0693436           5
+ 0.0702104           0
+ 0.0710772           0
+  0.071944           2
+ 0.0728108           4
+ 0.0736775           2
+ 0.0745443           3
+ 0.0754111           2
+ 0.0762779           1
+ 0.0771447           2
+ 0.0780115           3
+ 0.0788783           2
+ 0.0797451           5
+ 0.0806119           4
+ 0.0814787           2
+ 0.0823455           0
+ 0.0832123           3
+ 0.0840791           1
+ 0.0849459           2
+ 0.0858127           0
+ 0.0866795           1

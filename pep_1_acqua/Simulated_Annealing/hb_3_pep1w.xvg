@@ -1,0 +1,51 @@
+# This file was created Wed May 10 17:13:01 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/clusterSA_pep1w_3.pdb1.pdb -s /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/annealing_pep1w.tpr -num /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/hb_3_pep1w.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       350           4          79
+       352           4          82
+       354           3          81
+       356           4          82
+       358           4          81
+       360           4          80
+       362           4          80
+       364           4          81
+       366           4          80
+       368           3          81
+       370           4          77
+       372           4          79
+       374           4          77
+       376           4          77
+       378           4          80
+       380           4          80
+       382           4          79
+       384           4          76
+       386           4          82
+       388           4          80
+       390           4          77
+       392           4          77
+       394           4          78
+       396           4          77
+       398           4          78
+       400           4          80
