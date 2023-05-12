@@ -1,0 +1,126 @@
+# This file was created Fri May 12 15:24:08 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f /content/sandrozzona-multiscala/pep_1_acqua/Steered/equilibrazione_posres/equilibri_smd.trr -s /content/sandrozzona-multiscala/pep_1_acqua/Steered/equilibrazione_posres/pep_1w_equili_smd.tpr -num /content/sandrozzona-multiscala/pep_1_acqua/Steered/hbond/hb_beforeSMD.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# GROwing Monsters And Cloning Shrimps
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0          14          95
+         1          12         100
+         2          13         100
+         3          16          94
+         4          12          93
+         5          16          96
+         6          15         102
+         7          15          98
+         8          14         100
+         9          12         101
+        10          14         104
+        11          12          98
+        12          15          97
+        13          14          99
+        14          15          98
+        15          17         100
+        16          14          96
+        17          17         101
+        18          14         103
+        19          14          97
+        20          13         107
+        21          14          95
+        22          14          94
+        23          14          97
+        24          15          99
+        25          14          97
+        26          15          98
+        27          16         101
+        28          15          95
+        29          13          92
+        30          11          98
+        31          14          98
+        32          14          99
+        33          13         102
+        34          15          97
+        35          13          98
+        36          16          93
+        37          16          97
+        38          14          90
+        39          14         100
+        40          14          99
+        41          15          97
+        42          17          95
+        43          15          99
+        44          18          94
+        45          16          98
+        46          16          95
+        47          16          98
+        48          15          95
+        49          15         101
+        50          14          94
+        51          17          96
+        52          17          96
+        53          17          99
+        54          16          87
+        55          14          94
+        56          16          95
+        57          14          99
+        58          13         101
+        59          17          97
+        60          14         101
+        61          17          96
+        62          16         100
+        63          16          97
+        64          15          95
+        65          15          96
+        66          16          95
+        67          12         101
+        68          15          95
+        69          14          96
+        70          13         101
+        71          13          91
+        72          17         101
+        73          15          97
+        74          13          99
+        75          17          93
+        76          17          96
+        77          16          99
+        78          13          99
+        79          15          94
+        80          16          97
+        81          13          99
+        82          14          94
+        83          15          97
+        84          17         100
+        85          15          97
+        86          14         102
+        87          13          99
+        88          15          95
+        89          14          94
+        90          12          97
+        91          14          98
+        92          13         101
+        93          14          99
+        94          16          96
+        95          14         100
+        96          15         100
+        97          11          98
+        98          16          95
+        99          15          94
+       100          13          98
