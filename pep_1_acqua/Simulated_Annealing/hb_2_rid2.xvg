@@ -1,0 +1,27 @@
+# This file was created Fri May 12 15:09:24 2023
+# Created by:
+#              :-) GROMACS - gmx hbond, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /content
+# Command line:
+#   gmx hbond -f /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/Confronto_Cluster/clusterSA_pep1w_2_dueclust.pdb -s /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/annealing_pep1w.tpr -num /content/sandrozzona-multiscala/pep_1_acqua/Simulated_Annealing/hb_2_rid2.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       150          10          92
+       152           9         100
